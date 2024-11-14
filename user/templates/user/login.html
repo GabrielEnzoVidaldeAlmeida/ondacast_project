@@ -1,11 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static "/user/css/styles.css" %}">
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="card-login">
+        <div class="logo">
+            <h1><u>Onda Cast</u></h1>
+            <img src="{% static "/user/img/headphones.png" %}" alt="">
+        </div>
+        <h2><u>login</u></h2>
+        <class class="form">
+            <form action="" method="post">
+                <input type="text" name="email" id="">
+                <input type="text" name="password" id="">
+            </form>
+        </class>
+        <class class="login-buttons">
+            <a href="#">Entrar</a>
+            <a href="#">Esqueceu sua senha?</a>
+            <a href="#">Acessar conta de desenvolvedor</a>
+            <p>Não tem uma conta?<a href="#">Criar conta</a></p>
+        </class>
+    </div>
 </body>
 </html>
