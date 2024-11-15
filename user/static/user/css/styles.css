@@ -1,60 +1,21 @@
-/*FONTES*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-/*-------------------------------*/
-
 :root{
     --fundo-principal: #380061;
     --cor-fonte: #FFFFFF;
+    --card-login: #1B002F; 
 }
-
 body{
     margin: 0;
     padding: 0;
     background-color: var(--fundo-principal);
 }
 
-h1{
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
-    color: var(--cor-fonte);
-    font-weight: 300;
-}
-h2{
-    display: flex;
-    justify-content: center;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
-    color: var(--cor-fonte);
-    font-weight: 300;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.logo h1{
-    margin-right: 20px;
-}
-
-.form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form input{
+.container-body{
     display: flex;
     flex-direction: column;
-}
-
-.login-buttons a{
-    display: flex;
-    justify-content: center;
+    min-height: 100vh;
 
 }
-.login-buttons p{
-    display: flex;
-    justify-content: center;
+.container-body main{
+    flex: 1 1 0;
+    border: 0;
 }

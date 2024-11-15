@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +13,18 @@
             <h1><u>Onda Cast</u></h1>
             <img src="{% static "/user/img/headphones.png" %}" alt="">
         </div>
-        <h2><u>login</u></h2>
+        <h2><u>Cadastro</u></h2>
         <class class="form">
             <form action="" method="post">
                 <input type="text" name="email" id="caixa-texto" placeholder="Email/Usuário">
                 <input type="text" name="password" id="" placeholder="Senha">
+                <input type="text" name="password" id="" placeholder="Confirmar a senha">
             </form>
         </class>
         <class class="login-buttons">
-            <a href="{% url 'index' %}" id="btn-entrar">Entrar</a>
-            <a href="#">Esqueceu sua senha?</a>
-            <a href="#">Acessar conta de desenvolvedor</a>
-            <p>Não tem uma conta?&nbsp;<a href="{% url 'cadastro' %}">Criar conta</a></p>
+            <a href="#" id="btn-entrar">Cadastrar</a>
+
+            <p>Já tem conta?&nbsp;<a href="{% url 'Login' %}">Acessar conta</a></p>
         </class>
-    </div>
 </body>
 </html>

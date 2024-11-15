@@ -1,0 +1,108 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*-------------------------------*/
+
+:root{
+    --fundo-principal: #380061;
+    --cor-fonte: #FFFFFF;
+    --card-login: #1B002F; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-principal);
+}
+.card-login{
+    background-color: var(--card-login);
+    margin-top: 70px;
+    height: 600px;
+    width: 500px;
+    justify-self: center;
+    border-radius: 10px;
+
+}
+
+h1{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    color: var(--cor-fonte);
+    font-weight: 300;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    color: var(--cor-fonte);
+    font-weight: 300;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo h1{
+    margin-right: 20px;
+    margin-top: 80px;
+}
+.logo img{
+    margin-top: 50px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form input{
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 5px 10px 2px 10px;
+    background-color: var(--card-login);
+    border-bottom: solid 2px var(--cor-fonte);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+    color: var(--cor-fonte);
+}
+.login-buttons #btn-entrar{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 70px;
+    border-radius: 15px;
+    padding: 10px 10px 8px 10px;
+    justify-self: center;
+    text-decoration: none;
+}
+
+.login-buttons a{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.login-buttons p{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-fonte);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    margin-top: 100px;
+}
+
+a{
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+}
