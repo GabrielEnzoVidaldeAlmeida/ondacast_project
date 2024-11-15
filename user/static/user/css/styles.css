@@ -1,8 +1,15 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*-------------------------------*/
+
+/*VARIÁVEIS DE COR*/
 :root{
     --fundo-principal: #380061;
     --cor-fonte: #FFFFFF;
     --card-login: #1B002F; 
 }
+/*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
 body{
     margin: 0;
     padding: 0;
@@ -18,4 +25,78 @@ body{
 .container-body main{
     flex: 1 1 0;
     border: 0;
+}
+
+/*NAVBAR*/
+
+.navbar{
+    display: flex;
+    align-items:center;
+}
+
+.logo{
+    display: flex;
+    color: var(--cor-fonte);
+    margin-left: 100px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+}
+.logo img{
+    margin-top: -10px;
+}
+
+.nav-icons{
+    margin-left: 900px;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.nav-icons a:not(:last-child){
+    margin-right: 10px;
+}
+
+/*RODAPE*/
+
+.links-rodape{
+    display: flex;
+    margin-left: 100px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+}
+.links-rodape a{
+    text-decoration: none;
+    color: var(--cor-fonte);
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.links a:not(:last-child){
+    margin-bottom: 10px;
+}
+.empresa{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.empresa a:not(:last-child){
+    margin-bottom: 10px;
+}
+.itens-rodape{
+    display: flex;
+}
+.icons-rodape{
+    margin-left: 770px;
+}
+.icons-rodape img{
+    width: 46px;
+    height: 46px;
+}
+.icons-rodape a:not(:last-child){
+    margin-right: 20px;
 }

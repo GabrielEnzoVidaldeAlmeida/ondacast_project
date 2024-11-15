@@ -1,6 +1,21 @@
 {% extends 'user/base.html' %}
 {% load static %}
 
+{% block nav %}
+<div class="navbar">
+    <div class="logo">
+        <h1>OndaCast</h1>
+        <img src="{% static "/user/img/headphones.png" %}" alt="">
+    </div>
+    <div class="nav-icons">
+        <a href=""><img src="{% static "/user/img/search.png" %}" alt=""></a>
+        <a href=""><img src="{% static "/user/img/heart.png" %}" alt=""></a>
+        <a href=""><img src="{% static "/user/img/notificacao.png" %}" alt=""></a>
+        <a href="" ><img src="{% static "/user/img/profile.png" %}" alt=""></a>
+    </div>
+</div>
+{% endblock %}
+
 {% block main %}
 <h1>ola</h1>
 {% endblock %}
