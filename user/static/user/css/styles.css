@@ -8,6 +8,7 @@
     --fundo-principal: #380061;
     --cor-fonte: #FFFFFF;
     --card-login: #1B002F; 
+    --card-principal: #23003C;
 }
 /*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
 body{
@@ -37,21 +38,23 @@ body{
 .logo{
     display: flex;
     color: var(--cor-fonte);
-    margin-left: 100px;
+    margin-left: 90px;
     margin-top: 30px;
     font-size: 24px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
+    margin-bottom: 10px;
 }
 .logo img{
     margin-top: -10px;
 }
 
 .nav-icons{
-    margin-left: 900px;
+    margin-left: 910px;
     margin-top: 40px;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .nav-icons a:not(:last-child){
@@ -89,6 +92,7 @@ body{
 }
 .itens-rodape{
     display: flex;
+    margin-top: 40px;
 }
 .icons-rodape{
     margin-left: 770px;
@@ -99,4 +103,27 @@ body{
 }
 .icons-rodape a:not(:last-child){
     margin-right: 20px;
+}
+.icons-rodape p{
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+/* MAIN */
+.conteudo-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card-lateral{
+    height: 840px;
+    width: 300px;
+    background-color: var(--card-login);
+    
+}
+.card-principal{
+    height: 840px;
+    width: 1100px;
+    background-color: var(--card-principal);
+    margin-left: 12px;
 }
