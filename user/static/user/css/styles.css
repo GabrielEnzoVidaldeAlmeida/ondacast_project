@@ -1,6 +1,8 @@
 /*FONTES*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /*-------------------------------*/
 
 /*VARIÁVEIS DE COR*/
@@ -9,6 +11,9 @@
     --cor-fonte: #FFFFFF;
     --card-login: #1B002F; 
     --card-principal: #23003C;
+    --btn-lateral-normal: #7334a4;
+    --btn-lateral-clicado: #391c50
+
 }
 /*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
 body{
@@ -119,11 +124,53 @@ body{
     height: 840px;
     width: 300px;
     background-color: var(--card-login);
-    
+    color: var(--cor-fonte);
+    justify-items: center;
 }
+.card-lateral h2{
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+}
+.card-lateral button{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: var(--cor-fonte);
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+}
+.card-lateral button:hover{
+    cursor: pointer;
+}
+
+#btnRecentes{
+    background-color: var(--btn-lateral-clicado);
+    margin-right: 10px;
+}
+#btnSeguindo{
+    background-color: var(--btn-lateral-normal);
+    margin-left: 10px;
+}
+
 .card-principal{
     height: 840px;
     width: 1100px;
     background-color: var(--card-principal);
     margin-left: 12px;
+}
+.card-principal h2{
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    color: var(--cor-fonte);
+    margin-left: 32px;
+}
+
+.barra-branca{
+    width: 240px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
 }
