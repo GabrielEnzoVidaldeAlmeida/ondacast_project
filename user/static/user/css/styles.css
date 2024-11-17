@@ -12,7 +12,7 @@
     --card-login: #1B002F; 
     --card-principal: #23003C;
     --btn-lateral-normal: #7334a4;
-    --btn-lateral-clicado: #391c50
+    --btn-lateral-clicado: #391c50;
 
 }
 /*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
@@ -152,6 +152,13 @@ body{
 #btnSeguindo{
     background-color: var(--btn-lateral-normal);
     margin-left: 10px;
+}
+
+#btnRecentes:hover{
+    background-color: var(--btn-lateral-clicado);
+}
+#btnSeguindo:hover{
+    background-color: var(--btn-lateral-clicado);
 }
 
 .card-principal{

@@ -4,5 +4,5 @@ from user.views import *
 urlpatterns = [
     path ('', Login, name="Login"),
     path ('cadastro', Cadastro,  name="cadastro"),
-    path ('index', Index, name='index')
+    path ('index', Index, name='index'),
 ]
