@@ -144,7 +144,6 @@ body{
 .card-lateral button:hover{
     cursor: pointer;
 }
-
 #btnRecentes{
     background-color: var(--btn-lateral-clicado);
     margin-right: 10px;
@@ -153,14 +152,6 @@ body{
     background-color: var(--btn-lateral-normal);
     margin-left: 10px;
 }
-
-#btnRecentes:hover{
-    background-color: var(--btn-lateral-clicado);
-}
-#btnSeguindo:hover{
-    background-color: var(--btn-lateral-clicado);
-}
-
 .card-principal{
     height: 840px;
     width: 1100px;
@@ -180,4 +171,31 @@ body{
     height: 1px;
     background-color: #FFFFFF;
     margin-top: 20px;
+}
+.containerRecentes{
+    font-family: "Josefin Sans", sans-serif;
+}
+.containerSeguindo{
+    font-family: "Inter", sans-serif;
+}
+.recentes img{
+    margin-right: 4px;
+    margin-left: 20px;
+}
+.recentes a{
+    text-decoration: none;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+}
+.info-card-recentes h4{
+    color: var(--cor-fonte);
+}
+.info-card-recentes p{
+    margin-top: -10px;
+    font-size: 16px;
+    font-weight: 100;
+    color: var(--cor-fonte);
 }
