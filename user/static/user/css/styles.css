@@ -176,7 +176,7 @@ body{
     font-family: "Josefin Sans", sans-serif;
 }
 .containerSeguindo{
-    font-family: "Inter", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 .recentes img{
     margin-right: 4px;
@@ -190,6 +190,10 @@ body{
     align-items: center;
     justify-content:left;
 }
+.recentes a:hover{
+    background-color: var(--btn-lateral-normal);
+    transition: 250ms;
+}
 .info-card-recentes h4{
     color: var(--cor-fonte);
 }
@@ -198,4 +202,27 @@ body{
     font-size: 16px;
     font-weight: 100;
     color: var(--cor-fonte);
+}
+
+.seguindo img{
+    margin-right: 4px;
+    margin-left: 20px;
+    margin-top: 10.275px;
+    margin-bottom: 10.275px;
+}
+.seguindo a{
+    text-decoration: none;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+}
+.seguindo a:hover{
+    background-color: var(--btn-lateral-normal);
+    transition: 250ms;
+}
+.info-card-seguindo h4{
+    color: var(--cor-fonte);
+    margin-left: 5px;
 }
