@@ -56,14 +56,75 @@ body{
 }
 
 .nav-icons{
-    margin-left: 910px;
-    margin-top: 40px;
+    margin-left: 890px;
+    margin-top: 20px;
     justify-content: space-between;
     margin-bottom: 10px;
 }
-
+.nav-icons a{
+    width: 50px;
+    height: 50px;
+}
+.nav-icons button{
+    all: unset; /* Reseta todos os estilos (exceto o display) */
+    -webkit-appearance: none; /* Remove o estilo padrão no Safari e Chrome */
+    -moz-appearance: none; /* Remove o estilo padrão no Firefox */
+    appearance: none; /* Remove o estilo padrão no IE */
+    background: none; /* Remove a cor de fundo */
+    border: none; /* Remove a borda */
+    border-radius: 10px;
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove o margin */
+    font: inherit; /* Herda a fonte do elemento pai */
+    color: inherit; /* Herda a cor do texto */
+    cursor: pointer; /* Define o cursor para indicar que é clicável */
+}
 .nav-icons a:not(:last-child){
     margin-right: 10px;
+}
+.icone-svg {
+    width: 50px;
+    height: 50px;
+    color: var(--btn-lateral-normal); /* Cor inicial do ícone */
+    transition: color 0.3s ease; /* Transição suave */
+}
+.icone-svg:hover {
+    color: var(--btn-lateral-clicado); /* Cor quando o mouse passa por cima */
+    /*color: #dcdcdc;*/
+}
+.icone-svg-busca{
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    color: var(--btn-lateral-normal); /* Cor inicial do ícone */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.profileCard{
+    position: absolute;
+    background-color: #1E1E1E;
+    width: 200px;
+    height: 170px;
+    margin-left: 1250px;
+    margin-top: 250px;
+    display: none;
+}
+.profileCard li, a{
+    text-decoration: none;
+    list-style: none;
+}
+.profileCard ul{
+    margin-left: -15px;
+}
+.profileCard a{
+    color: var(--cor-fonte);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.separa-barra{
+    height: 1px;
+    width: 200px;
+    background-color: gray;
 }
 
 /*RODAPE*/

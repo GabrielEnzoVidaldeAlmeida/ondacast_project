@@ -1,3 +1,20 @@
+//BOTÃO PROFILE:
+var btnProfile = document.querySelector('#btnProfile');
+var profileCard = document.querySelector(".profileCard");
+
+
+btnProfile.addEventListener('click', function(){
+    const displayCardProfile = window.getComputedStyle(profileCard).display;
+
+    if (displayCardProfile === 'none') {
+        profileCard.style.display = 'block';
+    } else {
+        profileCard.style.display = 'none';
+    }
+});
+
+//-------------------------------------------------------------
+
 //BOTÕES DO CARD LATERAL (SEGUINDO E RECENTES):
 
 var btnRecentes = document.querySelector('#btnRecentes');
