@@ -1,0 +1,100 @@
+{% extends 'user/base.html' %}
+{% load static %}
+
+{% block nav %}
+<div class="navbar">
+    <div class="logo">
+        <h1>OndaCast</h1>
+        <img src="{% static "/user/img/headphones.png" %}" alt="">
+    </div>
+    <div class="nav-icons">
+        
+    </div>
+    <div class="profileCard">
+        <div class="link-profile-card">
+            <ul>
+                <li><a href="">Conta</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Configurações</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Downloads</a></li>
+            </ul>
+            <div class="separa-barra"></div>
+            <ul>
+                <li><a href="">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seus Interesses</h2>
+        <button id="btnRecentes">Recentes</button>
+        <button id="btnSeguindo">Seguindo</button>
+        <div class="barra-branca"></div>
+        <div class="containerRecentes">
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/talentos_extraordinarios.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Talentos Extraordinários</h4>
+                        <p>Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/mentes_inspiradoras.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Mentes Inspiradoras</h4>
+                        <p>Com Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+                        <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/neabi.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>NEABI</h4>
+                        <p>Personalidades negras</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="containerSeguindo" style="visibility: hidden;">
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/aluisio_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Aluísio Igor</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Momento IFRN</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/neabi_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>NEABI</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-principal">
+        <h2>Principais Temas</h2>
+    </div>
+</div>
+{% endblock %}
