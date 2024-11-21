@@ -66,18 +66,18 @@ body{
     height: 50px;
 }
 .nav-icons button{
-    all: unset; /* Reseta todos os estilos (exceto o display) */
-    -webkit-appearance: none; /* Remove o estilo padrão no Safari e Chrome */
-    -moz-appearance: none; /* Remove o estilo padrão no Firefox */
-    appearance: none; /* Remove o estilo padrão no IE */
-    background: none; /* Remove a cor de fundo */
-    border: none; /* Remove a borda */
+    all: unset;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
     border-radius: 10px;
-    padding: 0; /* Remove o padding */
-    margin: 0; /* Remove o margin */
-    font: inherit; /* Herda a fonte do elemento pai */
-    color: inherit; /* Herda a cor do texto */
-    cursor: pointer; /* Define o cursor para indicar que é clicável */
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
 }
 .nav-icons a:not(:last-child){
     margin-right: 10px;
