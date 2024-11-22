@@ -8,3 +8,6 @@ def Cadastro(request):
 
 def inicial_deslogado(request):
     return render(request, "user/inicial_deslogado.html")
+
+def Perfil(request):
+    return render(request, "user/perfil.html")

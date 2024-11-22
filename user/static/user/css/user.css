@@ -1,0 +1,47 @@
+/*ESTILIZAÇÃO DA PÁGINA DE PERFIL*/
+.profile-img{
+    justify-self: center;
+    margin-top: 100px;
+}
+.profile-info{
+    justify-items: center;
+}
+.profile-info div{
+    margin-top: 30px;
+}
+.informacoes h4{
+    color: var(--cor-fonte);
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 0px;
+}
+.informacoes input{
+    background-color: var(--btn-lateral-clicado);
+    border: none;
+    border-radius: 2px;
+    width: 880px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+    padding-left: 20px;
+    padding-top: 2px;
+}
+.btn-salvar-dados{
+    justify-self:end;
+    margin-right: 100px;
+}
+.btn-salvar-dados button{
+    background-color: var(--btn-lateral-clicado);
+    color: var(--cor-fonte);
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    border-radius: 2px;
+    width: 180px;
+    height: 50px;
+    margin-top: 20px;
+}
+.btn-salvar-dados button:hover{
+    background-color: var(--btn-lateral-normal);
+    cursor: pointer;
+    transition: 300ms;
+}
+/*-------------------------------*/
