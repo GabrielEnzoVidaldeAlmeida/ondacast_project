@@ -1,6 +1,7 @@
 /*ESTILIZAÇÃO DA PÁGINA DE PERFIL*/
 .profile-img{
     justify-self: center;
+    justify-items: center;
     margin-top: 100px;
 }
 .profile-info{
@@ -8,6 +9,105 @@
 }
 .profile-info div{
     margin-top: 30px;
+}
+.edit-profile-img button{
+    position: absolute;
+    margin-left: -120px;
+    margin-top: -244px;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    cursor: pointer;
+    background: none;
+    border-style: none;
+}
+.edit-profile-img button img{
+    visibility: hidden;
+}
+.edit-profile-img button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 200ms;
+    transition-timing-function: linear;
+}
+.edit-profile-img button:hover img{
+    visibility: visible;
+    transition: 200ms;
+    transition-timing-function: linear;
+}
+.alterar-foto{
+    display: none;
+    margin-top: -250px;
+    position: absolute;
+    background-color: #1E1E1E;
+    width: 600px;
+    height: 400px;
+    margin-left: 240px;
+    z-index: 2;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.alterar-foto #btnCloseAltFoto{
+    display: inline-block;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-right: 0px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    background: none;
+}
+.alterar-foto #btnCloseAltFoto:hover{
+    background-color: var(--btn-lateral-clicado);
+    transition: 500ms;
+}
+
+.alterar-foto .info-alterar-foto{
+    margin-top: -70px;
+    justify-items: center;
+    align-self: center;
+}
+
+.alterar-foto .info-alterar-foto h4{
+    color: #999999;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight:lighter;
+}
+
+.alterar-foto .info-alterar-foto #btn-selecionar-foto{
+    border: none;
+    background-color: var(--btn-lateral-normal);
+    font-family: "Inter", sans-serif;
+    color: var(--cor-fonte);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.alterar-foto .info-alterar-foto #btn-selecionar-foto:hover{
+    background-color: var(--btn-lateral-clicado);
+    transition: 250ms;
+}
+.alterar-foto #btn-alterar-foto{
+    border: none;
+    width: 160px;
+    height: 40px;
+    margin-bottom: -100px;
+    margin-top: 10px;
+    justify-self: end;
+    margin-right: 30px;
+    background-color: var(--btn-lateral-clicado);
+    border-radius: 2px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+}
+.alterar-foto #btn-alterar-foto:hover{
+    background-color: var(--btn-lateral-normal);
+    transition: 300ms;
 }
 .informacoes h4{
     color: var(--cor-fonte);
@@ -44,4 +144,30 @@
     cursor: pointer;
     transition: 300ms;
 }
+
+.informacoes button #btn-eye{
+    width: 16px;
+    height: 16px;
+    color: #fff;
+}
+#btn-eye{
+    margin-left: -70px;
+    margin-top: 18px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    background: none;
+
+}
+
+#btn-editPerfil{
+    margin-left: -40px;
+    margin-top: 18px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
 /*-------------------------------*/
+
+

@@ -13,6 +13,7 @@
     --card-principal: #23003C;
     --btn-lateral-normal: #7334a4;
     --btn-lateral-clicado: #391c50;
+    --cards-adicionais: #1E1E1E;
 
 }
 /*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
@@ -103,7 +104,7 @@ body{
 .profileCard{
     position: absolute;
     z-index: 2;
-    background-color: #1E1E1E;
+    background-color: var(--cards-adicionais);
     width: 200px;
     height: 170px;
     margin-left: 1250px;
