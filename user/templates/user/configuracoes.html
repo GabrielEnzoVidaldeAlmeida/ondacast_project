@@ -115,39 +115,39 @@
     </div>
     <div class="card-principal">
         <h2>Configurações</h2>
-        <class class="configs">
-            <class class="textos-configuracoes">
+        <div class="configs">
+            <div class="textos-configuracoes">
                 <h3>Autoplay</h3>
                 <p>Ouça seus podcasts em sequência. Quando o episódio acabar colocaremos outro com o tema parecido.</p>
-            </class>
-            <class class="btn-check">
+            </div>
+            <div class="btn-check">
                 <input type="checkbox" id="check">
                 <label for="check" class="switch">  
                     <span class="slider"></span>
                 </label>
-            </class>
-        </class>
+            </div>
+        </div>
         
-        <class class="configs">
-            <class class="textos-configuracoes">
+        <div class="configs">
+            <div class="textos-configuracoes">
                 <h3>Downloads</h3>
                 <p>Conteúdo baixado para ouvir offline. Localização do armazenamento offline:</p>
                 <input type="text" value="C:\Users\aluisioigor\AppData\Packages\OndaCast\OndaCast_offline" id="" readonly>
-            </class>
+            </div>
 
-            <class class="btn-downloads">
+            <div class="btn-downloads">
                 <button>Mudar local de Downloads</button>
                 <button>Remover todos os Downloads</button>
-            </class>
-        </class>
+            </div>
+        </div>
 
-        <class class="configs">
-            <class class="btn-excluir-conta">
+        <div class="configs">
+            <div class="btn-excluir-conta">
                 <button>Excluir Conta</button>
-            </class>
-        </class>
+            </div>
+        </div>
 
-        <class class="card-excluir-conta">
+        <div class="card-excluir-conta">
             <h3>Deseja realmente excluir a sua conta?</h3>
             <ul>
                 <li>Não receberá mais notificações dos seus podcasts favoritos</li>
@@ -156,7 +156,11 @@
             </ul>
             <button id="excluir-conta">SIM, quero excluir minha conta</button>
             <button id="manter-conta">NÃO, quero manter minha conta</button>
-        </class>
+        </div>
     </div>  
 </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "/user/js/config.js" %}"></script>
 {% endblock %}

@@ -79,3 +79,4 @@ btnCloseAltFoto.addEventListener('click', function(){
     }
 });
 //-------------------------------------------------------------
+
