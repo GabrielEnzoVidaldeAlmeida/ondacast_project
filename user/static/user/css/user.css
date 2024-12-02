@@ -170,4 +170,189 @@
 }
 /*-------------------------------*/
 
+/*---------------- TELA CONFIGURAÇÕES ----------------*/
+
+/*CONFIGURAÇÕES - AUTOPLAY*/
+
+.configs{
+    display: flex;
+}
+.configs{
+    margin-left: 64px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h3{
+    font-size: 24px;
+    color: var(--cor-fonte);
+    margin-top: 32px;   
+}
+.configs p{
+    width: 600px;
+    color: #999999;
+    margin-top: -20px;
+}
+.btn-check{
+    margin-top: 48px;
+    margin-left: 300px;
+}
+
+#check{
+    display: none;
+}
+.switch{
+    position: relative;
+    background-color: #777;
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5 ease-in-out;
+    cursor: pointer;
+}
+.slider{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transition: all .5s ease-in-out;
+}
+#check:checked ~ .switch{
+    background-color: blueviolet;
+}
+#check:checked ~ .switch .slider{
+    transform: translateX(35px);
+}
+
+/*-------------------------------*/
+
+/*CONFIGURAÇÕES - DOWNLOADS*/
+.textos-configuracoes input{
+    border-style: none;
+    border-radius: 4px;
+    background-color: var(--btn-lateral-clicado);
+    width: 580px;
+    height: 40px;
+    color: #999999;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 20px;
+}
+
+.btn-downloads{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 180px;
+}
+.btn-downloads button{
+    border-style: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--cor-fonte);
+    background-color: var(--btn-lateral-clicado);
+}
+.btn-downloads button:hover{
+    background-color: var(--btn-lateral-normal);
+    transition: 300ms;
+}
+
+.btn-excluir-conta{
+    margin-top: 60px;
+}
+
+.btn-excluir-conta button{
+    border-style: none;
+    border-radius: 8px;
+    background-color: red;
+    color: var(--cor-fonte);
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100px;
+    height: 40px;
+}
+.btn-excluir-conta button:hover{
+    border: 0.2px solid white;
+    border-radius: 8px;
+}
+
+
+/*-------------------------------*/
+
+/*CARD EXCLUIR CONTA*/
+
+.card-excluir-conta{
+    display: none;
+    position: absolute;
+    background-color: #1E1E1E;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 600px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: 240px;
+    justify-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 2;
+}
+.card-excluir-conta ul{
+    color: var(--cor-fonte);
+    width: 300px;
+    margin-top: 60px;
+}
+.card-excluir-conta li{
+    margin-top: 36px;
+}
+.card-excluir-conta img p li{
+    display: flex;
+    flex-direction: row;
+}
+#excluir-conta{
+    border-style: none;
+    border-radius: 4px;
+    background-color: red;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--cor-fonte);
+    width: 140px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+#excluir-conta:hover{
+    border: 1px solid white;
+}
+#manter-conta{
+    border-style: none;
+    border-radius: 4px;
+    background-color: var(--btn-lateral-clicado);
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--cor-fonte);
+    width: 140px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 30px;
+
+}
+#manter-conta:hover{
+    background-color: var(--btn-lateral-normal);
+    transition: 300ms;
+}
+
+.ofuscado{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: 1;
+}
+/*-------------------------------*/
+
+/*----------------------------------------------------*/
+
 

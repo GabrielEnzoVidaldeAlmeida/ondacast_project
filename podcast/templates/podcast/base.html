@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static "/user/css/user.css" %}">
 </head>
 <body class="container-body">
+    <div class="ofuscado"></div>
     <header>
         <nav>
             {% block nav %}
@@ -46,7 +47,7 @@
             </div>
         </div>
     </footer>
-    {% block js %}  
-    {% endblock %}
+
+    <script src="{% static "/user/js/user.js" %}"></script>
 </body>
 </html>

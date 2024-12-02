@@ -47,6 +47,40 @@ btnSeguindo.addEventListener('click', function(){
 
 //-------------------------------------------------------------
 
-//CARROSSEIS DO INDEX.HTML
+//BOTÃO - MOSTRAR SENHA
+var btnEye = document.querySelector('#btn-eye');
+var senhaPerfil = document.querySelector('#senhaPerfil');
+
+btnEye.addEventListener('click', function(){
+    if (senhaPerfil.getAttribute('type') == 'password') {
+        senhaPerfil.setAttribute('type', 'text');
+    } else {
+        senhaPerfil.setAttribute('type', 'password');
+    }
+});
+//-------------------------------------------------------------
+
+// BOTÃO - FECHAR CARD ALTERAR FOTO PERFIL e ABRIR CARD ALTERAR FOTO PERFIL
+var btnAbrirCardAltFotoPerfil = document.querySelector('#btnAbrirCardAltFotoPerfil');
+var cardAlterarFoto = document.querySelector('.alterar-foto');
+var btnCloseAltFoto = document.querySelector('#btnCloseAltFoto');
+
+//const displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display;
+
+btnAbrirCardAltFotoPerfil.addEventListener('click', function(){
+    if (displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display === 'none') {
+        cardAlterarFoto.style.display = 'grid';
+    }
+});
+
+btnCloseAltFoto.addEventListener('click', function(){
+    if (displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display === 'grid'){
+        cardAlterarFoto.style.display = 'none';
+    }
+});
+//-------------------------------------------------------------
+
+// BOTÃO - EXCLUIR CONTA
+
 
 //-------------------------------------------------------------

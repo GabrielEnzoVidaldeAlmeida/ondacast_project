@@ -40,6 +40,10 @@ body{
     display: flex;
     align-items:center;
 }
+.navbar .logo a{
+    text-decoration: none;
+    color: inherit;
+}
 
 .logo{
     display: flex;

@@ -4,8 +4,8 @@
 {% block nav %}
 <div class="navbar">
     <div class="logo">
-        <h1>OndaCast</h1>
-        <img src="{% static "/podcast/img/headphones.png" %}" alt="">
+        <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+        <a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
     </div>
     <div class="nav-icons">
         <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -36,7 +36,7 @@
                 <li><a href="{% url 'perfil' %}">Conta</a></li>
             </ul>
             <ul>
-                <li><a href="">Configurações</a></li>
+                <li><a href="{% url 'configuracoes' %}">Configurações</a></li>
             </ul>
             <ul>
                 <li><a href="">Downloads</a></li>
@@ -263,6 +263,3 @@
 </div>
 {% endblock %}
      
-{% block js %}
-    <script src="{% static "/podcast/js/podcast.js" %}"></script>
-{% endblock %}
