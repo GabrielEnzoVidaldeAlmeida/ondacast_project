@@ -21,6 +21,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--fundo-principal);
+    
 }
 
 .container-body{
@@ -39,6 +40,8 @@ body{
 .navbar{
     display: flex;
     align-items:center;
+    position: absolute;
+    
 }
 .navbar .logo a{
     text-decoration: none;
@@ -61,8 +64,8 @@ body{
 }
 
 .nav-icons{
-    margin-left: 890px;
-    margin-top: 20px;
+    margin-left: 120vh;
+    margin-top: 3vh;
     justify-content: space-between;
     margin-bottom: 10px;
 }
@@ -188,6 +191,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 20vh;
 }
 .card-lateral{
     height: 840px;
@@ -373,3 +377,4 @@ body{
     color: var(--cor-fonte);
     margin-top: -15px;
 }
+
