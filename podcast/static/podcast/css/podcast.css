@@ -61,7 +61,7 @@ body{
 }
 
 .nav-icons{
-    margin-left: 890px;
+    margin-left: 950px;
     margin-top: 20px;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -110,9 +110,9 @@ body{
     z-index: 2;
     background-color: var(--cards-adicionais);
     width: 200px;
-    height: 170px;
+    height: 210px;
     margin-left: 1250px;
-    margin-top: 250px;
+    margin-top: 300px;
     display: none;
 }
 .profileCard li, a{
