@@ -15,11 +15,6 @@
             <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#dcdcdc" stroke-width="2"/>
             </svg></a>
         <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-            <svg class="icone-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-f</title>
-                <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" style="fill:#dcdcdc;stroke:#dcdcdc;stroke-miterlimit:10;stroke-width:32px"/>
-                <path d="M256,360a16,16,0,0,1-9-2.78c-39.3-26.68-56.32-45-65.7-56.41-20-24.37-29.58-49.4-29.3-76.5.31-31.06,25.22-56.33,55.53-56.33,20.4,0,35,10.63,44.1,20.41a6,6,0,0,0,8.72,0c9.11-9.78,23.7-20.41,44.1-20.41,30.31,0,55.22,25.27,55.53,56.33.28,27.1-9.31,52.13-29.3,76.5-9.38,11.44-26.4,29.73-65.7,56.41A16,16,0,0,1,256,360Z" fill="currentColor"/>
-            </svg></a>
-        <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg class="icone-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-j</title>
                 <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" style="fill:#dcdcdc;stroke:#dcdcdc;stroke-miterlimit:10;stroke-width:32px"/>
                 <path d="M365.2,313c-16.33-19.34-27.86-27.47-27.86-80.8,0-48.86-25.78-66.23-47-74.67a11.39,11.39,0,0,1-6.34-6.68C280.29,138.6,269.88,128,256,128s-24.31,10.6-28,22.86a11.35,11.35,0,0,1-6.33,6.68c-21.24,8.46-47,25.8-47,74.67,0,53.33-11.54,61.46-27.87,80.8-6.77,8-.65,23,11.19,23H354C365.77,336,371.94,321,365.2,313Z" fill="currentColor"/>
@@ -37,6 +32,9 @@
             </ul>
             <ul>
                 <li><a href="{% url 'configuracoes' %}">Configurações</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Favoritos</a></li>
             </ul>
             <ul>
                 <li><a href="">Downloads</a></li>
@@ -119,14 +117,45 @@
             <div class="sobre-podcast">
                 <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
                 <div class="sobre">
-                    <h3>Sobre:</h3>
-                </div>
-                <div class="descricao">
+                    <div class="sobre-seguindo">
+                        <h3>Sobre:</h3>
+                        <button id="btn-sininho"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg class="svg-sininho" width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-j</title><path d="M427.68,351.43C402,320,383.87,304,383.87,217.35,383.87,138,343.35,109.73,310,96c-4.43-1.82-8.6-6-9.95-10.55C294.2,65.54,277.8,48,256,48S217.79,65.55,212,85.47c-1.35,4.6-5.52,8.71-9.95,10.53-33.39,13.75-73.87,41.92-73.87,121.35C128.13,304,110,320,84.32,351.43,73.68,364.45,83,384,101.61,384H410.49C429,384,438.26,364.39,427.68,351.43Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M320,384v16a64,64,0,0,1-128,0V384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></button>
+                        <button id="btn-seguir">Seguir</button>
+                    </div>
                     <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...</p>
                 </div>
             </div>
-            <div class="eps-podcast">
 
+            <div class="barra-branca-separadora"></div>
+
+            <div class="eps-podcast">
+                <h3>Episódios:</h3>
+                <div class="card-ep">
+                    <button><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg id="btn-play-ep" width="32px" height="32px" viewBox="-3 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                            
+                            <title>play</title>
+                            <desc>Created with Sketch Beta.</desc>
+                            <defs>
+                        
+                        </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)" fill="#000000">
+                                    <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup">
+                        
+                        </path>
+                                </g>
+                            </g>
+                        </svg></button>
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h4>O Poder de Servir</h4>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div>  
+                </div>
             </div>
         </div>
     </div>
