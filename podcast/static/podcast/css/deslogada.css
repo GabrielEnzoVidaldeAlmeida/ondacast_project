@@ -24,9 +24,13 @@ body{
     min-height: 100vh;
 
 }
-.container-body main{
-    flex: 1 1 0;
-    border: 0;
+
+
+.navbar-deslogado{
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    justify-content: center;
 }
 .divAviso{
     width: 240px;
@@ -44,14 +48,36 @@ body{
     margin: auto;  
 }
 .butoes{
-    text-decoration: none;
     display: flex;
-    color: var(--cor-fonte);
-    margin-left: 100vh;
+    
+    margin-left: 52rem;
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
-    margin-bottom: 10px;
+    a{
+        display: flex;
+        color: var(--cor-fonte);
+    }
+    h1{
+        margin: auto;
+        margin-right: 30px;
+    }
+    
+}
+.btn{
+    padding-top: 1.5vh;
+    padding-left: 5vh;
+    padding-right: 1vh;
+    padding-bottom: 1.5vh;
+    border-radius: 10px;
+    background-color: var(--btn-lateral-normal);
+    border-color: var(--btn-lateral-normal);
+}
+.butoes button:hover{
+    cursor: pointer;
+    background-color: var(--btn-lateral-clicado);
+    border-color: var(--btn-lateral-clicado);
+    border-style: none;
 }
