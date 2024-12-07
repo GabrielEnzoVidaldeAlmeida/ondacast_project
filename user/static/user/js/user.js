@@ -64,18 +64,25 @@ btnEye.addEventListener('click', function(){
 var btnAbrirCardAltFotoPerfil = document.querySelector('#btnAbrirCardAltFotoPerfil');
 var cardAlterarFoto = document.querySelector('.alterar-foto');
 var btnCloseAltFoto = document.querySelector('#btnCloseAltFoto');
+var ofuscarBody = document.querySelector('.ofuscado');
 
 //const displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display;
 
 btnAbrirCardAltFotoPerfil.addEventListener('click', function(){
+    var displayOfuscarBody = window.getComputedStyle(ofuscarBody).display;
+
     if (displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display === 'none') {
         cardAlterarFoto.style.display = 'grid';
+        ofuscarBody.style.display = 'block';
     }
 });
 
 btnCloseAltFoto.addEventListener('click', function(){
+    var displayOfuscarBody = window.getComputedStyle(ofuscarBody).display;
+
     if (displayCardAltFotoPerfil = window.getComputedStyle(cardAlterarFoto).display === 'grid'){
         cardAlterarFoto.style.display = 'none';
+        ofuscarBody.style.display = 'none';
     }
 });
 //-------------------------------------------------------------

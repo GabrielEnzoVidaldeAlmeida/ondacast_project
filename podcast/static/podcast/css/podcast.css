@@ -112,9 +112,9 @@ body{
     z-index: 2;
     background-color: var(--cards-adicionais);
     width: 200px;
-    height: 170px;
+    height: 210px;
     margin-left: 1250px;
-    margin-top: 250px;
+    margin-top: 300px;
     display: none;
 }
 .profileCard li, a{
@@ -161,20 +161,25 @@ body{
     margin-bottom: 20px;
 }
 .links a:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 .empresa{
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 155px;
     margin-bottom: 20px;
 }
 .empresa a:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 17px;
+}
+.itens-rodape{
+    display: flex;
+    margin-top: 40px;
+    margin-left: -45px;
 }
 .icons-rodape{
-    margin-top: 18px;
-    margin-left: 800px;
+    margin-left: 780px;
+    margin-top: 20px;
 }
 .icons-rodape img{
     width: 46px;
@@ -244,7 +249,6 @@ body{
 .barra-branca{
     width: 240px;
     height: 1px;
-    background-color: #FFFFFF;
     margin-top: 20px;
 }
 .containerRecentes{
@@ -266,9 +270,13 @@ body{
     justify-content:left;
 }
 .recentes a:hover{
-    background-color: var(--btn-lateral-normal);
+    background-color: var(--fundo-principal);
     transition: 250ms;
 }
+.info-card-recentes{
+    padding-left: 10px;
+}
+
 .info-card-recentes h4{
     color: var(--cor-fonte);
 }
@@ -294,7 +302,7 @@ body{
     justify-content:left;
 }
 .seguindo a:hover{
-    background-color: var(--btn-lateral-normal);
+    background-color: var(--fundo-principal);
     transition: 250ms;
 }
 .info-card-seguindo h4{

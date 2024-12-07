@@ -5,3 +5,6 @@ def Index(request):
 
 def InicialDeslogado(request):
     return render(request, "podcast/inicial_deslogado.html")
+
+def podcastPage(request):
+    return render(request, "podcast/podcast_page.html")
