@@ -41,7 +41,8 @@ body{
 .navbar{
     display: flex;
     align-items:center;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     
 }
 .navbar .logo a{
@@ -52,20 +53,19 @@ body{
 .logo{
     display: flex;
     color: var(--cor-fonte);
-    
-    margin-top: 30px;
-    font-size: 24px;
+    margin-top: 16px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
-    margin-bottom: 10px;
 }
 .logo img{
     margin-top: -10px;
 }
 
 .nav-icons{
-    margin-left: 850px;
+    display: flex;
+    justify-content: center;
+    margin-left: 950px;
 }
 .nav-icons a{
     width: 50px;
@@ -100,9 +100,10 @@ body{
     /*color: #dcdcdc;*/
 }
 .icone-svg-busca{
-    margin-top: 15px;
-    width: 50px;
-    height: 50px;
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
     color: var(--btn-lateral-normal); /* Cor inicial do ícone */
     transition: color 0.3s ease; /* Transição suave */
 }
@@ -172,13 +173,9 @@ body{
 .empresa a:not(:last-child){
     margin-bottom: 17px;
 }
-.itens-rodape{
-    display: flex;
-    margin-top: 40px;
-    margin-left: -45px;
-}
+
 .icons-rodape{
-    margin-left: 780px;
+    margin-left: 680px;
     margin-top: 20px;
 }
 .icons-rodape img{
@@ -201,7 +198,7 @@ body{
     margin-top: 15px;
 }
 .card-lateral{
-    height: 840px;
+    height: 930px;
     width: 300px;
     background-color: var(--card-login);
     color: var(--cor-fonte);
@@ -217,23 +214,23 @@ body{
     font-size: 16px;
     color: var(--cor-fonte);
     border-style: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .card-lateral button:hover{
     cursor: pointer;
 }
 #btnRecentes{
     background-color: var(--btn-lateral-clicado);
-    margin-right: 10px;
 }
 #btnSeguindo{
     background-color: var(--btn-lateral-normal);
-    margin-left: 10px;
 }
 .card-principal{
-    height: 840px;
+    height: 930px;
     width: 1100px;
     background-color: var(--card-principal);
     margin-left: 12px;
@@ -274,7 +271,8 @@ body{
     transition: 250ms;
 }
 .info-card-recentes{
-    padding-left: 10px;
+    font-size: 16px;
+    padding-left: 4px;
 }
 
 .info-card-recentes h4{
@@ -313,58 +311,53 @@ body{
 
 /* CARD PRINCIPAL */
 .carrosselRecentes{
-    margin-top: -15px;
-    margin-bottom: -40px;
-    display: flex;
-    margin-left: 32px;
-    height: 200px;
-}
-.horizontal-scroll{
-    margin-top: -20px;
-    width: 1000px;
-    height: 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
     overflow: hidden;
+    width: 1050px;
 }
-.horizontal-scroll .btn-scroll-recentes{
-    background-color: rgba(156, 89, 207, 0.7);
-    box-shadow: 0px 0px 10px #000;
-    padding: 5px 8px;
-    border: 0;
-    border-radius: 50%;
-    margin: 0px 5px;
+.horizontal-scroll{
+    position: relative;
+    margin-left: 50px;
+
+}
+.btn-scroll-recentes{
+    position: absolute;
+    transform: translate(-50%);
+    background: none;
+    border: none;
     z-index: 1;
     cursor: pointer;
-    margin-bottom: 20px;
+
 }
-.horizontal-scroll .btn-scroll-recentes:hover{
-    background-color: rgba(115, 52, 164, 1);
-    transition: 300ms;
+#btn-scroll-left{
+    height: 190px;
+    background-color: var(--card-login);
+    left: 10px;
+    background: rgba(53, 25, 77, 0.18);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.10);
+    
+}
+#btn-scroll-right{
+    height: 190px;
+    background-color: var(--card-login);
+    right: -20px;
+    background: rgba(53, 25, 77, 0.18);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.10);
 }
 .recentes-container{
     display: flex;
-    flex-direction: row;
-    justify-self: flex-start;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
 }
 .card-recentes{
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 auto;
     width: 200px;
-    height: 150px;
-    margin: 15px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    border-radius: 50%;
+    text-align: center;
 }
 
 .card-recentes img{
