@@ -4,32 +4,24 @@
     flex-direction: row;
     justify-content: center;
 }
-.divAviso{
-    width: 240px;
-    height: 70px;
-    background-color: #424242;
-    border-radius: 10px;
-    display: flex;
-    margin-top: 12px;
-}
+
 
 .logo{
     display: flex;
     color: var(--cor-fonte);
     margin-right: 900px;
-    margin-top: 30px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 .butoes{
     display: flex;
-    margin-top: 30px;
     font-size: 16px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
+    margin-top: 20px;
     a{
         display: flex;
         color: var(--cor-fonte);
