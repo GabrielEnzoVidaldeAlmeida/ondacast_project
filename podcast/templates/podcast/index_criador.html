@@ -1,0 +1,72 @@
+{% extends 'podcast/base.html' %}
+{% load static %}
+
+{% block nav%}
+    <div class="logo">
+        <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+        <a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+    </div>
+{% endblock %}
+
+{% block main %}
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seu Podcast</h2>
+
+        <div class="barra-branca"></div>
+
+        <div class="recentes">
+            <h4>Adicionar novo eposódio</h4>
+            <img src= "{% static "/user/img/addEpisodio.png" %}" alt="">
+        </div>
+        <div class="recentes">
+            <h4>Verificar estatistícas</h4>
+            <img src= "{% static "/user/img/grafico-estatistico 1.png" %}" alt="">
+        </div>
+    </div>
+
+<div class="card-principal">
+    <h2>Talentos Extraordinários</h2>
+    <div class="podcast-content">
+        <div class="sobre-podcast">
+            <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+            <div class="sobre">
+                <div class="sobre-seguindo">
+                    <h3>Sobre:</h3>
+                    
+                </div>
+                <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...</p>
+            </div>
+        </div>
+
+        <div class="barra-branca-separadora"></div>
+
+        <div class="eps-podcast">
+            <h3>Episódios:</h3>
+            <div class="card-ep">
+                <button><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg id="btn-play-ep" width="32px" height="32px" viewBox="-3 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                        
+                        <title>play</title>
+                        <desc>Created with Sketch Beta.</desc>
+                        <defs>
+                    
+                    </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                            <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)" fill="#000000">
+                                <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup">
+                    
+                    </path>
+                            </g>
+                        </g>
+                    </svg></button>
+                <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                <div class="info-ep">
+                    <h4>O Poder de Servir</h4>
+                    <span>12/12/2012 - 2H</span>
+                    <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                </div>  
+            </div>
+</div>
+{% endblock%}

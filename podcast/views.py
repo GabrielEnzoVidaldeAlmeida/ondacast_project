@@ -8,3 +8,6 @@ def InicialDeslogado(request):
 
 def podcastPage(request):
     return render(request, "podcast/podcast_page.html")
+
+def indexCriador(request):
+    return render(request, "podcast/index_criador.html")
