@@ -8,11 +8,14 @@
     --btn-lateral-clicado: #391c50;
     --cards-adicionais: #1E1E1E;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fundo-principal);
+    
+}
 .sobre-podcast{
     display: flex;
-    /*margin-left: 32px;*/
-    /*margin-right: 32px;*/
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
     justify-content: center;
@@ -22,18 +25,22 @@
     height: 160px;
 }
 .sobre{
-    margin-top: -30px;
     margin-left: 10px;
+    font-weight: lighter;
     text-align: justify;
     width: 800px;
-}
-.sobre h3{
-    margin-bottom: 30px;
-}
-.sobre p{
-    font-weight: lighter;
-    font-size: 20px;
-}
+    h3{
+        margin: auto;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+    p{
+        margin: auto;
+        margin-top: 10px;
+        font-size: 20px;
+    } 
+}  
+
 .sobre-seguindo{
     display: flex;
 }
@@ -43,17 +50,18 @@
     height: 1px;
     background-color: #FFFFFF;
     margin-left: 28px;
+    margin-top: 20px;
 }
 
 .eps-podcast{
+    position: relative;
+    overflow: hidden;
     margin-left: 32px;
-}
-.eps-podcast h3{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: var(--cor-fonte);
-}
+    height: 540px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}   
+
 #btn-sininho{
     width: 24px;
     height: 24px;
@@ -92,32 +100,63 @@
 }
 .card-ep{
     display: flex;
+    margin-bottom: 20px;
+    img{
+        width: 220px;
+        height: 160px;
+    }
+}
+.button-container {
+    margin-left: 40px;
+    margin-top: 20px;
+    button{
+        height: 40px;
+    }
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    transition: background-color 0.3s ease;
+}
+
+.icon-button:hover {
+    background-color: var(--btn-lateral-clicado); 
+}
+.icon-button img {
+    margin-top: 5px;
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
 }
 .info-ep{
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: lighter;
-    margin-left: 2vh;
-}
-.info-ep h4{
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-    font-size: 3vh;
-}
-.info-ep span{
-    font-size: 3vh;
-}
-.info-ep p{
-    font-size: 3vh;
-    width: 90vh;
+    margin-left: 12px;
     text-align: justify;
-    margin-bottom: -2vh;
-}
-.card-ep button{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+    width: 700px;
+    
+    h3{
+        margin: auto;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+    p{
+        margin: auto;
+        margin-top: 30px;
+    } 
+}  
+
+
 #btn-play-ep{
     position: absolute;
     margin-top: -15px;

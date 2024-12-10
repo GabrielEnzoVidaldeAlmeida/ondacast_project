@@ -57,9 +57,17 @@ body{
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
+    
 }
+.logo h1{
+    font-weight: lighter;
+    font-size: 36px;
+}
+
 .logo img{
     margin-top: -10px;
+    width: 50px;
+
 }
 
 .nav-icons{
@@ -320,39 +328,20 @@ body{
     margin-left: 50px;
 
 }
-.btn-scroll-recentes{
-    position: absolute;
-    transform: translate(-50%);
-    background: none;
-    border: none;
-    z-index: 1;
-    cursor: pointer;
 
-}
-#btn-scroll-left{
-    height: 190px;
-    background-color: var(--card-login);
-    left: 10px;
-    background: rgba(53, 25, 77, 0.18);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.10);
-    
-}
-#btn-scroll-right{
-    height: 190px;
-    background-color: var(--card-login);
-    right: -20px;
-    background: rgba(53, 25, 77, 0.18);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 20px rgba(227, 228, 237, 0.10);
-}
 .recentes-container{
     display: flex;
     gap: 16px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-
+}
+.recentes-container:hover{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 .card-recentes{
     flex: 0 0 auto;
