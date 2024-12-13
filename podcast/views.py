@@ -11,3 +11,9 @@ def podcastPage(request):
 
 def indexCriador(request):
     return render(request, "podcast/index_criador.html")
+
+def Favoritos(request):
+    return render(request, "podcast/favoritos.html")
+
+def Downloads(request):
+    return render(request, "podcast/downloads.html")

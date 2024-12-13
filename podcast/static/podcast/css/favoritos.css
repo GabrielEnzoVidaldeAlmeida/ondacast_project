@@ -1,0 +1,9 @@
+.eps-podcast-favdownl{
+    position: relative;
+    overflow: hidden;
+    margin-left: 32px;
+    height: 780px;
+    margin-top: 16px;
+    overflow-y: auto;
+    scrollbar-width: none;
+} 

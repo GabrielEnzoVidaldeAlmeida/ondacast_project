@@ -73,7 +73,7 @@ body{
 .nav-icons{
     display: flex;
     justify-content: center;
-    margin-left: 950px;
+    margin-left: 1000px;
 }
 .nav-icons a{
     width: 50px;

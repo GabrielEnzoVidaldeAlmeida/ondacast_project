@@ -6,4 +6,6 @@ urlpatterns = [
     path ('podcast', podcastPage, name='podcast_page'),
     path ('', InicialDeslogado, name="inicial_deslogado"),
     path ('index_criador', indexCriador, name='index_criador'),
+    path ('favoritos', Favoritos, name='favoritos'),
+    path ('downloads', Downloads, name='downloads'),
 ]

@@ -58,6 +58,7 @@ body{
     overflow: hidden;
     margin-left: 32px;
     height: 540px;
+    margin-top: 16px;
     overflow-y: auto;
     scrollbar-width: none;
 }   
