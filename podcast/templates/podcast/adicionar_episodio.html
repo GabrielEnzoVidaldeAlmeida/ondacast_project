@@ -1,0 +1,53 @@
+{% extends 'podcast/base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seu Podcast</h2>
+
+        <div class="barra-branca"></div>
+
+        <div class="info-card-recentes">
+           <a href = "{% url 'index_criador' %}"> <h4> Página Inicial </h4> </a>
+            
+        </div>
+        <div class="info-card-recentes">
+            <h4>Verificar estatistícas</h4>
+            
+        </div>
+    </div>
+
+<div class="card-principal">
+    <form class="upload-form">
+        <div class="form-group">
+            <label>Foto do episódio</label>
+            <div class="upload-area">
+                <input id="img-upload" type="file" id="episode-photo" hidden>
+                <button type="button" class="btn-select">Selecionar Imagem</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Título do episódio</label>
+            <input type="text" placeholder="O Poder da Semadura">
+        </div>
+
+        <div class="form-group">
+            <label>Descrição</label>
+            <input type="text" placeholder="máx. 140 caracteres">
+        </div>
+
+        <div class="form-group">
+            <label>Upload</label>
+            <div class="upload-area">
+                <input type="file" id="episode-audio" hidden>
+                <button type="button" class="btn-select">Selecionar Arquivo</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Salvar e enviar</button>
+    </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,52 @@
+.upload-form {
+    max-width: 800px;
+    margin: 2vh auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color:  var(--cor-fonte);
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.upload-area {
+    border: 2px dashed var(--fundo-principal);
+    padding: 40px;
+    text-align: center;
+    border-radius: 4px;
+    background-color:  var(--cor-fonte);
+    width: 93%;
+}
+
+.btn-select {
+    background-color: #6c2bd9;
+    color:  var(--cor-fonte);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: var(--btn-lateral-normal);
+    color: var(--cor-fonte);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 2vh;
+}
+

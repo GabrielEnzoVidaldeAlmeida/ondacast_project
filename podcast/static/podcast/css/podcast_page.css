@@ -19,16 +19,20 @@ body{
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
     justify-content: center;
+    align-content: stretch;
+    
 }
 .sobre-podcast img{
-    width: 220px;
+    width: 200px;
     height: 160px;
 }
 .sobre{
     margin-left: 10px;
+    margin-right: 10px;
     font-weight: lighter;
     text-align: justify;
     width: 800px;
+
     h3{
         margin: auto;
         margin-top: 4px;
@@ -43,6 +47,7 @@ body{
 
 .sobre-seguindo{
     display: flex;
+    
 }
 
 .barra-branca-separadora{

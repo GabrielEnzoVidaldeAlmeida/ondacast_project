@@ -8,4 +8,5 @@ urlpatterns = [
     path ('index_criador', indexCriador, name='index_criador'),
     path ('favoritos', Favoritos, name='favoritos'),
     path ('downloads', Downloads, name='downloads'),
+    path ('adicionar_episodio', AdicionarEpisodio, name='adicionar_episodio'),
 ]

@@ -17,3 +17,6 @@ def Favoritos(request):
 
 def Downloads(request):
     return render(request, "podcast/downloads.html")
+
+def AdicionarEpisodio(request):
+    return render(request, "podcast/adicionar_episodio.html")
