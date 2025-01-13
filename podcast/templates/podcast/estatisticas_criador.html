@@ -20,13 +20,75 @@
         </div>
     </div>
 
-</div>
+
 <div class="card-principal">
     <h2>Podcasts Postados:</h2>
+
+    <button class="btn-data">2024</button>
+
+    <div class="grafico">
+        <canvas id="grafico-barra"></canvas>
+    </div>
     
-    
+    <div class="container-estatisticas">
+
+        <div class="estatistica">
+            <h3>Total de Visualizações</h3>
+            <p>+1509 mil no último mês</p>
+            <h2>3 Bilhões &#8593;</h2>
+        </div>
+
+        <div class="estatistica">
+            <h3>Seguidores</h3>
+            <p>-10 mil no último mês</p>
+            <h2>1.5 Milhão &#8595;</h2>
+        </div>
+
+        <div class="estatistica">
+            <h3>Total de Visualizações</h3>
+            <p>+1509 mil no último mês</p>
+            <h2>3 Bilhões &#8593;</h2>
+        </div>
+
+    </div>
+</div>
+</div>
     
 </div>
+<script src="{% static '/podcast/js/estatistica.js' %}"></script>
 
 
+
+<!-- Por se tratar de um gráfico de exemplo, foi adiciona o valor no proprio HTML -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('grafico-barra').getContext('2d');
+    const graficoBarra = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            datasets: [{
+                label: 'Visualizações Mensais (em milhões)',
+                data: [120, 150, 180, 200, 170, 140, 190, 220, 240, 210, 230, 250],
+                backgroundColor: '#7334a4',
+                borderColor: '#7334a4',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: '#fff' }
+                },
+                x: {
+                    ticks: { color: '#fff' }
+                }
+            },
+            plugins: {
+                legend: { labels: { color: '#fff' } }
+            }
+        }
+    });
 {% endblock %}
