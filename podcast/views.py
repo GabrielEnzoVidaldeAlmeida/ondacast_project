@@ -20,3 +20,6 @@ def Downloads(request):
 
 def AdicionarEpisodio(request):
     return render(request, "podcast/adicionar_episodio.html")
+
+def EstatisticasCriador(request):
+    return render(request, "podcast/estatisticas_criador.html")

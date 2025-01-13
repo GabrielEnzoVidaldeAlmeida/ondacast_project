@@ -1,0 +1,32 @@
+{% extends 'podcast/base.html' %}
+{% load static %}
+
+
+{% block main %}
+
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seu Podcast</h2>
+
+        <div class="barra-branca"></div>
+
+        <div class="info-card-recentes">
+            <a href = "{% url 'adicionar_episodio' %}"> <h4> Adicionar novo eposódio </h4> </a>
+            
+        </div>
+        <div class="info-card-recentes">
+            <a href = "{% url 'index_criador' %}"> <h4> Página Inicial </h4> </a>
+            
+        </div>
+    </div>
+
+</div>
+<div class="card-principal">
+    <h2>Podcasts Postados:</h2>
+    
+    
+    
+</div>
+
+
+{% endblock %}

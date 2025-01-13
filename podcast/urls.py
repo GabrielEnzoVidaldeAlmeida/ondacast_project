@@ -9,4 +9,5 @@ urlpatterns = [
     path ('favoritos', Favoritos, name='favoritos'),
     path ('downloads', Downloads, name='downloads'),
     path ('adicionar_episodio', AdicionarEpisodio, name='adicionar_episodio'),
+    path ('estatisticas_criador', EstatisticasCriador, name='estatisticas_criador'),
 ]
