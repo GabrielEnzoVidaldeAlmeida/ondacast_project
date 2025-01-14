@@ -16,15 +16,16 @@
         <h2><u>Cadastro</u></h2>
         <class class="form">
             <form action="" method="post">
+                <input type="text" name="nome_podcast" id="caixa-texto" placeholder="Nome do Podcast">
                 <input type="text" name="email" id="caixa-texto" placeholder="Email/Usuário">
                 <input type="text" name="password" id="" placeholder="Senha">
                 <input type="text" name="password" id="" placeholder="Confirmar a senha">
             </form>
         </class>
         <class class="login-buttons">
-            <a href="#" id="btn-entrar">Cadastrar</a>
+            <a href="{% url 'index_criador' %}" id="btn-entrar">Cadastrar</a>
 
-            <p>Já tem conta?&nbsp;<a href="{% url 'Login' %}">Acessar conta</a></p>
+            <p>Já tem conta de criador?&nbsp;<a href="{% url 'login_criador' %}">Acessar conta</a></p>
         </class>
 </body>
 </html>

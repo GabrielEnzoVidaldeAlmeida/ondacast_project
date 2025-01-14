@@ -14,3 +14,9 @@ def Perfil(request):
 
 def Configuracoes(request):
     return render(request, "user/configuracoes.html")
+
+def Login_Criador(request):
+    return render(request, "user/login_criador.html")
+
+def Cadastro_Criador(request):
+    return render(request, "user/cadastro_criador.html")

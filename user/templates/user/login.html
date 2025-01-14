@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
         <class class="login-buttons">
             <a href="{% url 'index' %}" id="btn-entrar">Entrar</a>
             <a href="#">Esqueceu sua senha?</a>
-            <a href="#">Acessar conta de desenvolvedor</a>
+            <a href="{% url 'login_criador'%}">Acessar conta de desenvolvedor</a>
             <p>Não tem uma conta?&nbsp;<a href="{% url 'cadastro' %}">Criar conta</a></p>
         </class>
     </div>
