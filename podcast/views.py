@@ -23,3 +23,6 @@ def AdicionarEpisodio(request):
 
 def EstatisticasCriador(request):
     return render(request, "podcast/estatisticas_criador.html")
+
+def EditarPerfilCriador(request):
+    return render(request, "podcast/editar_perfil_criador.html")

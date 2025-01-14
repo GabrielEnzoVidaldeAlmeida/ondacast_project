@@ -96,3 +96,20 @@
     padding: 20px;
     border-radius: 8px;
 }
+
+
+/*botoes*/
+.info-ep-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-deletar{
+    background: none;
+    border: none;
+    color: #bb0000;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
