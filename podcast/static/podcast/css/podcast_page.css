@@ -14,64 +14,76 @@ body{
     background-color: var(--fundo-principal);
     
 }
-.sobre-podcast{
-    display: flex;
+.podcast-content{
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
-    justify-content: center;
-    align-content: stretch;
-    
-}
-.sobre-podcast img{
-    width: 200px;
-    height: 160px;
-}
-.sobre{
-    margin-left: 10px;
-    margin-right: 10px;
     font-weight: lighter;
     text-align: justify;
-    width: 800px;
+    width: 700px;
+    margin-left: 3vh;
 
-    h3{
-        margin: auto;
-        margin-top: 4px;
-        margin-bottom: 20px;
+    .sobre-podcast{
+        display: flex;
+        color: var(--cor-fonte);
+        font-family: 'Josefin Sans', sans-serif;
+        align-content: stretch;
+        margin-left: 2vh;
+        
+        
     }
-    p{
-        margin: auto;
-        margin-top: 10px;
-        font-size: 20px;
+    .sobre-podcast img{ 
+        border-radius: 0.63vw;
+        width: 13vw;
+        height: 20vh;
+    }
+    .sobre{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 45vw;
+
+    
+        h3{
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            font-size: 4vh;
+        }
+        p{
+            margin-top: -1vh;
+            font-size: 3vh;
+            width: 52vw;
+        }
     } 
-}  
+}
+ 
 
 .sobre-seguindo{
     display: flex;
-    
+    justify-content: space-between;
+    width: 52vw;
 }
 
 .barra-branca-separadora{
-    width: 1040px;
+    width: 68vw;
     height: 1px;
     background-color: #FFFFFF;
-    margin-left: 28px;
-    margin-top: 20px;
 }
 
 .eps-podcast{
     position: relative;
     overflow: hidden;
-    margin-left: 32px;
-    height: 540px;
-    margin-top: 16px;
+    margin-left: 5vh;
+    height: 70vh;
     overflow-y: auto;
     scrollbar-width: none;
+    
 }   
-
+.btn-podcastpage{
+    display: flex;
+    align-items: center;
+}
 #btn-sininho{
-    width: 24px;
-    height: 24px;
-    margin-left: 600px;
+    width: 2vw;
+    height: 4vh;
     align-self: center;
     background: none;
     border: none;
@@ -89,15 +101,16 @@ body{
     transition: 300ms ease;
 }
 #btn-seguir{
-    margin-left: 10px;
+    margin-left: 1vh;
     align-self: center;
     background-color: var(--btn-lateral-normal);
     border-style: none;
-    width: 100px;
-    height: 32px;
-    border-radius: 2px;
+    width: 7vw;
+    height: 4vh;
+    border-radius: 0.8vh;
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vh;
 }
 #btn-seguir:hover{
     background-color: var(--btn-lateral-clicado);
@@ -106,17 +119,22 @@ body{
 }
 .card-ep{
     display: flex;
-    margin-bottom: 20px;
-    img{
-        width: 220px;
-        height: 160px;
-    }
+    margin-bottom: 2vh;
+     img{
+            border-radius: 0.63vw;
+            width: 13vw;
+            height: 20vh;
+     }
+    
 }
 .button-container {
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 5vh;
     button{
-        height: 40px;
+        height: 7vh;
+    }
+    img{
+        width: 2vw;
+        height: 4vh;
     }
 }
 
@@ -138,28 +156,30 @@ body{
     background-color: var(--btn-lateral-clicado); 
 }
 .icon-button img {
-    margin-top: 5px;
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 2vw;
+    max-height: 3vh;
     display: block;
 }
 .info-ep{
     color: var(--cor-fonte);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: lighter;
-    margin-left: 12px;
+    margin-left: 2vh;
     text-align: justify;
-    width: 700px;
+    width: 45vw;
     
     h3{
-        margin: auto;
-        margin-top: 4px;
-        margin-bottom: 20px;
+        margin-top: 0.4vh;
+        margin-bottom: 2vh;
+        font-size: 4vh;
     }
     p{
-        margin: auto;
-        margin-top: 30px;
+        margin-top: 3vh;
+        font-size: 2.8vh;
     } 
+    span{
+        font-size: 2vh;
+    }
 }  
 
 
