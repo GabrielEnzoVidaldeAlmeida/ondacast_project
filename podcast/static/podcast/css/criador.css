@@ -1,3 +1,89 @@
+body{
+    color: black;
+    background-color: black;
+}
+
+.card-lateral{
+    background-color: #181818;
+}
+
+.card-principal{
+    background-color: #181818;
+}
+
+.info-card-lateral-criador{
+    justify-content: flex-start;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+}
+
+.info-card-recentes{
+    h4{
+        font-size: 2vh;
+        margin-left: 6vh;
+    }
+
+    :hover{
+        color: var(--btn-lateral-normal);
+        transition: 0.2s;
+    }
+    display: flex;
+    align-items: center;
+    margin-bottom: -2vh;
+    margin-top: 1vh;
+
+}
+
+.plus-svg{
+    fill: currentColor;
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+}
+
+.btn-sair-criador{
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+.separa-barra-roxa{
+    margin-top: 80vh;
+    width: 42vh;
+    height: 1px;
+    background-color: var(--btn-lateral-normal);
+}
+
+#plus-svg{
+    fill: currentColor;
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+    margin-left: 5vh;
+    margin-bottom: -0.2vh;
+}
+
+#stats-svg{
+    fill: currentColor;
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+    margin-left: 8.5vh;
+    margin-bottom: -0.2vh;
+}
+
+#exit-door-svg{
+    fill: currentColor;
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+    margin-left: 24.5vh;
+    margin-bottom: -0.2vh;
+}
+
+#home-svg{
+    fill: currentColor;
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+    margin-left: 15vh;
+    margin-bottom: -0.2vh;
+}
+
 .upload-form {
     max-width: 800px;
     margin: 2vh auto;

@@ -1,6 +1,11 @@
 {% extends 'podcast/base.html' %}
 {% load static %}
 
+{% block navegar-home %}
+<a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+{% endblock %}
+
 {% block nav %}
 <div class="navbar">    
     <div class="logo">

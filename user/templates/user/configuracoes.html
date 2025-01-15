@@ -1,6 +1,11 @@
 {% extends 'podcast/base.html' %}
 {% load static %}
 
+{% block navegar-home %}
+<a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+{% endblock %}
+
 {% block nav %}
 <div class="navbar">
     <div class="logo">
@@ -135,10 +140,13 @@
             </div>
         </div>
 
-        <div class="configs">
+        <div class="configs configs-btns">
+            <div class="btn-criar-conta-criador">
+                <button>Criar conta de CRIADOR</button>
+            </div>
             <div class="btn-excluir-conta">
                 <button>Excluir Conta</button>
-            </div>
+            </div>  
         </div>
 
         <div class="card-excluir-conta">

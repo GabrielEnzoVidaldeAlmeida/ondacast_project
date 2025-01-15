@@ -1,8 +1,10 @@
 {% extends 'podcast/base.html' %}
 {% load static %}
 
-
-
+{% block navegar-home %}
+<a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+{% endblock %}
 
 {% block main %}
 <div class="conteudo-main">
@@ -87,10 +89,10 @@
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/download(4).png' %}" alt="Baixar">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/play-button(2).png' %}" alt="Play">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div> 
                 </div>
@@ -107,10 +109,10 @@
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/download(4).png' %}" alt="Baixar">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/play-button(2).png' %}" alt="Play">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div>  
                 </div>
@@ -127,10 +129,10 @@
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div> 
                 </div>
@@ -147,10 +149,10 @@
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div> 
                 </div>
@@ -166,10 +168,10 @@
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div> 
                 </div>
@@ -180,15 +182,15 @@
                         <span>12/12/2012 - 2H</span>
                         <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
                     </div> 
-                    <div class="button-container-favdownl">
-                        <button class="icon-button-favdownl">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
-                        </button>
+                    <div class="button-container">
                         <button class="icon-button">
                             <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
                         </button>
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
                         </button>
                     </div> 
                 </div>
@@ -198,4 +200,5 @@
 {% endblock %}
 
 {% block javascript %}
+<script src="{% static "/podcast/js/podcast.js" %}"></script>
 {% endblock %}
