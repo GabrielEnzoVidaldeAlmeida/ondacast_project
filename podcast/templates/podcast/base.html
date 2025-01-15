@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="{% static "/podcast/css/podcast_page.css" %}">
     <link rel="stylesheet" href="{% static "/podcast/css/favoritos.css" %}">
     <link rel="stylesheet" href="{% static "/podcast/css/downloads.css" %}">
-    <link rel="stylesheet" href="{% static "/podcast/css/criador.css" %}">
+    {% block criadorcss %}
 
-    
+    {% endblock %}
 
 </head>
 <body class="container-body">
@@ -22,8 +22,9 @@
             {% block nav %}
             <div class="navbar">
                 <div class="logo">
-                    <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
-                    <a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+                    {% block navegar-home %}
+
+                    {% endblock %}
                     <div class="nav-icons">
                         <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                             <svg class="icone-svg-busca" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,8 +94,6 @@
             </div>
         </div>
     </footer>
-    <script src="{% static "/podcast/js/podcast.js" %}"></script>
-    <script src="{% static "/podcast/js/estatistica.js" %}"></script>
 
     {% block javascript %}
     
