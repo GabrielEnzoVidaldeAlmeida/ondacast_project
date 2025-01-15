@@ -9,7 +9,7 @@
 .logo{
     display: flex;
     color: var(--cor-fonte);
-    margin-right: 900px;
+    margin-right: 110vh;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
