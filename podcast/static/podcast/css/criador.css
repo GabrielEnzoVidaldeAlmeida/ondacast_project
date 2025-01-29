@@ -3,6 +3,26 @@ body{
     background-color: black;
 }
 
+.logo {
+    display: flex;
+    color: var(--cor-fonte);
+    margin-top: 1.5vh; 
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+    margin-left: -147.8vh;
+}
+
+.logo h1 {
+    font-weight: lighter;
+    font-size: 3vw; 
+}
+
+.logo img {
+    margin-top: -1vh;
+    width: 4vw; 
+}
+
 .card-lateral{
     background-color: #181818;
 }
@@ -81,6 +101,13 @@ body{
     stroke: currentColor;
     transition: stroke 0.2s, fill 0.2s;
     margin-left: 15vh;
+    margin-bottom: -0.2vh;
+}
+
+#edit-svg{
+    stroke: currentColor;
+    transition: stroke 0.2s, fill 0.2s;
+    margin-left: 16.5vh;
     margin-bottom: -0.2vh;
 }
 

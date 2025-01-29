@@ -72,9 +72,4 @@ btnManterConta.addEventListener('click', function(){
         ofuscarBody.style.display = 'none';
     }
 });
-
-
-
-
-
 //-------------------------------------------------------------

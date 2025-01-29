@@ -14,11 +14,11 @@
 
 .edit-profile-img button{
     position: absolute;
-    margin-left: -15.1vh;
-    margin-top: -29vh;
-    border-radius: 16vh;
-    width: 17.6vw;
-    height: 29vh;
+    margin-left: -18vh;
+    margin-top: -36.4vh;
+    border-radius: 50%;
+    width: 17.1vw;
+    height: 35.9vh;
     cursor: pointer;
     background: none;
     border-style: none;
@@ -146,8 +146,9 @@
     border-radius: 1vh;
     width: 12vw;
     height: 8vh;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-bottom: 2vh;
+    margin-right: -10vh;
 }
 .btn-salvar-dados button:hover{
     background-color: var(--btn-lateral-normal);

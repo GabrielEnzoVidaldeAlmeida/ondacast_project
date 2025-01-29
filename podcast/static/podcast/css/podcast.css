@@ -254,7 +254,8 @@ body{
 }
 
 .card-principal { 
-    width: 70vw;  
+    width: 70vw;
+    min-height: 90vh;  
     background-color: var(--card-principal);
     transition: transform 0.3s ease; 
 }
@@ -282,7 +283,7 @@ body{
     margin-right: 0.5vw;
     margin-left: 1.5vw;
     height: 8vh;
-    width: 5vw;
+    width: 4.5vw;
 }
 
 .recentes a {
@@ -358,11 +359,32 @@ body{
 
 .recentes-container {
     display: flex;
-    gap: 1.5vw; 
+    gap: 1.5vw;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
     width: 62vw;
+}
+
+@-moz-document url-prefix(){
+    .recentes-container {
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--btn-lateral-normal) black;
+    }
+}
+
+.recentes-container::-webkit-scrollbar {
+    height: 8px; /* Define a altura da barra de rolagem horizontal */
+}
+
+.recentes-container::-webkit-scrollbar-track {
+    background-color: var(--btn-lateral-clicado); /* Cor do track da barra de rolagem */
+    border-radius: 10px; /* Torna o track arredondado */
+}
+
+.recentes-container::-webkit-scrollbar-thumb {
+    background-color: var(--btn-lateral-normal); /* Cor do thumb da barra de rolagem */
+    border-radius: 10px; /* Torna o thumb arredondado */
+    transition: background-color 300ms ease;
 }
 
 .card-recentes {

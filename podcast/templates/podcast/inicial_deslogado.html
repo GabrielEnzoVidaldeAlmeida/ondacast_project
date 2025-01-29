@@ -26,15 +26,15 @@
         <div class="barra-branca"></div>
         <div class="containerRecentes">
             <div class="recentes">
-               
+                <h3>Faça login para ter acesso aos podcasts ouvidos recentemente.</h3>
             </div>  
         </div>
         <div class="containerSeguindo" style="visibility: hidden;">
-           
+            <h3>Faça login para ter acesso aos podcasts que está seguindo.</h3>
         </div>
     </div>
-    <div class="card-principal">
-        <h2>Principais Tema</h2>
+    <div class="card-principal" style="min-height: 132.5vh !important;">
+        <h2>Principais Temas</h2>
         <div class="carrosselRecentes">
             <div class="horizontal-scroll">
                 
@@ -196,4 +196,8 @@
         </div>
     </div>  
 </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "/podcast/js/deslogado.js" %}"></script>
 {% endblock %}

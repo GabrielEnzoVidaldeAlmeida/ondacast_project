@@ -9,7 +9,7 @@
 .logo{
     display: flex;
     color: var(--cor-fonte);
-    margin-right: 900px;
+    margin-right: 850px;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
@@ -40,6 +40,7 @@
     border-radius: 0.625rem;
     background-color: var(--btn-lateral-normal);
     border-color: var(--btn-lateral-normal);
+    border-style: none;
     h1{
         font-size: 16px;
     }
@@ -50,4 +51,22 @@
     background-color: var(--btn-lateral-clicado);
     border-color: var(--btn-lateral-clicado);
     border-style: none;
+    transition: 200ms;
+}
+
+.card-lateral h3{
+    font-style: italic;
+    font-size: 20px;
+    background-color: var(--btn-lateral-clicado);
+    text-align: justify;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+.recentes{
+    width: 34.2vh;
+}
+
+.containerSeguindo{
+    width: 34.2vh;
 }
