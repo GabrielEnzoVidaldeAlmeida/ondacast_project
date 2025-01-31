@@ -2,33 +2,19 @@
 {% load static %}
 
 {% block nav %}
-<link rel="stylesheet" href="{% static "/podcast/css/inicial_deslogada.css" %}">
-<div class="navbar">
+
+<link rel="stylesheet" href="{% static "/podcast/css/deslogada.css" %}">
+<div class="navbar-deslogado">
     <div class="logo">
         <h1>OndaCast</h1>
         <img src="{% static "/podcast/img/headphones.png" %}" alt="">
     </div>
-    <div class="nav-icons">
-        
+    <div class="butoes">
+        <a href='cadastro'><h1>Inscreva-se</h1></a>
+        <a href='login'><button class='btn'><h1>Entrar</H1></a></button>
     </div>
-    <div class="profileCard">
-        <div class="link-profile-card">
-            <ul>
-                <li><a href="">Conta</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Configurações</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Downloads</a></li>
-            </ul>
-            <div class="separa-barra"></div>
-            <ul>
-                <li><a href="">Sair</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+    
+    
 {% endblock %}
 
 {% block main %}
@@ -40,17 +26,178 @@
         <div class="barra-branca"></div>
         <div class="containerRecentes">
             <div class="recentes">
-               <div class="divAviso">
-                <p> Conecte-se para personalizar</p>
-               </div>
+                <h3>Faça login para ter acesso aos podcasts ouvidos recentemente.</h3>
             </div>  
         </div>
         <div class="containerSeguindo" style="visibility: hidden;">
-           
+            <h3>Faça login para ter acesso aos podcasts que está seguindo.</h3>
         </div>
     </div>
-    <div class="card-principal">
+    <div class="card-principal" style="min-height: 132.5vh !important;">
         <h2>Principais Temas</h2>
-    </div>
+        <div class="carrosselRecentes">
+            <div class="horizontal-scroll">
+                
+            
+                <div class="recentes-container">
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    <div class="card-recentes">
+                        <a href="{% url 'podcast_page' %}">
+                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                            <h3>Talentos Extraordinários</h3>
+                            <p>Aluísio Igor</p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Em Destaque</h2>
+        <div class="carrosselRecentes">
+            <div class="horizontal-scroll">
+                
+
+                <div class="recentes-container">
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Descubra</h2>
+        <div class="carrosselRecentes">
+            <div class="horizontal-scroll">
+                
+                <div class="recentes-container">
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                    <div class="card-recentes">
+                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <h3>Talentos Extraordinários</h3>
+                        <p>Aluísio Igor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
 </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "/podcast/js/deslogado.js" %}"></script>
 {% endblock %}

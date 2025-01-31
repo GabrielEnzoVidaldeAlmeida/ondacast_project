@@ -1,0 +1,204 @@
+{% extends 'podcast/base.html' %}
+{% load static %}
+
+{% block navegar-home %}
+<a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+{% endblock %}
+
+{% block main %}
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seus Interesses</h2>
+        <button id="btnRecentes">Recentes</button>
+        <button id="btnSeguindo">Seguindo</button>
+        <div class="barra-branca"></div>
+        <div class="containerRecentes">
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/talentos_extraordinarios.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Talentos Extraordinários</h4>
+                        <p>Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/mentes_inspiradoras.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Mentes Inspiradoras</h4>
+                        <p>Com Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+                        <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/neabi.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>NEABI</h4>
+                        <p>Personalidades negras</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="containerSeguindo" style="visibility: hidden;">
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/aluisio_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Aluísio Igor</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Momento IFRN</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/neabi_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>NEABI</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-principal">
+        <h2>Favoritos</h2>
+        <div class="podcast-content">
+            
+            <div class="barra-branca-separadora"></div>
+        </div>
+            <div class="eps-podcast-favdownl">
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                   
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div> 
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div> 
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+                
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div> 
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div> 
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+                <div class="card-ep">
+                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+                    <div class="info-ep">
+                        <h3>O Poder de Servir</h3>
+                        <span>12/12/2012 - 2H</span>
+                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
+                    </div> 
+                    <div class="button-container">
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        </button>
+                        <button class="icon-button">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        </button>
+                    </div> 
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static "/podcast/js/podcast.js" %}"></script>
+{% endblock %}

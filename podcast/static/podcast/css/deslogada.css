@@ -1,0 +1,72 @@
+.navbar-deslogado{
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.logo{
+    display: flex;
+    color: var(--cor-fonte);
+    margin-right: 110vh;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+    margin-top: 20px;
+}
+.butoes{
+    display: flex;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+    margin-top: 20px;
+    a{
+        display: flex;
+        color: var(--cor-fonte);
+        padding-right: 10px;
+    }
+    h1{
+        margin: auto;
+    }
+    
+}
+.btn{
+    padding-top: 0.938rem;
+    padding-left: 1.563rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.938rem;
+    border-radius: 0.625rem;
+    background-color: var(--btn-lateral-normal);
+    border-color: var(--btn-lateral-normal);
+    border-style: none;
+    h1{
+        font-size: 16px;
+    }
+    
+}
+.butoes button:hover{
+    cursor: pointer;
+    background-color: var(--btn-lateral-clicado);
+    border-color: var(--btn-lateral-clicado);
+    border-style: none;
+    transition: 200ms;
+}
+
+.card-lateral h3{
+    font-style: italic;
+    font-size: 20px;
+    background-color: var(--btn-lateral-clicado);
+    text-align: justify;
+    border-radius: 1vh;
+    padding: 1vh;
+}
+
+.recentes{
+    width: 34.2vh;
+}
+
+.containerSeguindo{
+    width: 34.2vh;
+}

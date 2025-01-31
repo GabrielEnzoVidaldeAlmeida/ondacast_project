@@ -1,0 +1,162 @@
+{% extends 'podcast/base.html' %}
+{% load static %}
+
+{% block navegar-home %}
+<a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+{% endblock %}
+
+{% block nav %}
+<div class="navbar">    
+    <div class="logo">
+        <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
+        <a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+    </div>
+    <div class="nav-icons">
+        <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg class="icone-svg-busca" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.1" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" fill="#dcdcdc"/>
+            <path d="M15 15L21 21" stroke="#dcdcdc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#dcdcdc" stroke-width="2"/>
+            </svg></a>
+       
+        <button id="btnProfile"><svg class="icone-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path opacity="1" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#dcdcdc"/>
+            <path d="M16.807 19.0112C15.4398 19.9504 13.7841 20.5 12 20.5C10.2159 20.5 8.56023 19.9503 7.193 19.0111C6.58915 18.5963 6.33109 17.8062 6.68219 17.1632C7.41001 15.8302 8.90973 15 12 15C15.0903 15 16.59 15.8303 17.3178 17.1632C17.6689 17.8062 17.4108 18.5964 16.807 19.0112Z" fill="currentColor"/>
+            <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3432 6 9.00004 7.34315 9.00004 9C9.00004 10.6569 10.3432 12 12 12Z" fill="currentColor"/>
+        </svg></button>
+    </div>
+    <div class="profileCard">
+        <div class="link-profile-card">
+            <ul>
+                <li><a href="{% url 'perfil' %}">Conta</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% url 'configuracoes' %}">Configurações</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Favoritos</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Downloads</a></li>
+            </ul>
+            <div class="separa-barra"></div>
+            <ul>
+                <li><a href="{% url 'Login' %}">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="conteudo-main">
+    <div class="card-lateral">
+        <h2>Seus Interesses</h2>
+        <button id="btnRecentes">Recentes</button>
+        <button id="btnSeguindo">Seguindo</button>
+        <div class="barra-branca"></div>
+        <div class="containerRecentes">
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/talentos_extraordinarios.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Talentos Extraordinários</h4>
+                        <p>Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+            <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/mentes_inspiradoras.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>Mentes Inspiradoras</h4>
+                        <p>Com Aluísio Rego</p>
+                    </div>
+                </a>
+            </div>
+                        <div class="recentes">
+                <a href="">
+                    <img src="{% static "/user/img/neabi.png" %}" alt="">
+                    <div class="info-card-recentes">
+                        <h4>NEABI</h4>
+                        <p>Personalidades negras</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="containerSeguindo" style="visibility: hidden;">
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/aluisio_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Aluísio Igor</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>Momento IFRN</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="seguindo">
+                <a href="">
+                    <img src="{% static "/user/img/neabi_seguindo.png" %}" alt="">
+                    <div class="info-card-seguindo">
+                        <h4>NEABI</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-principal">
+        <div class="profile-img">
+            <img src="{% static "/user/img/Ellipse 3.png" %}" alt="" style="width: 17vw;  ">
+            <div class="edit-profile-img">
+                <button id="btnAbrirCardAltFotoPerfil"><img src="{% static "user/svg/edit-svgrepo-com-perfil.svg" %}" alt=""></button>
+            </div>
+        </div>
+
+        <div class="alterar-foto">
+            <button id="btnCloseAltFoto"><img src="{% static "user/svg/close-sm-svgrepo-com.svg" %}" alt=""></button>
+            <div class="info-alterar-foto">
+                <img src="{% static "user/svg/upload-svgrepo-com.svg" %}" alt="">
+                <h4>Arraste e solte a foto para atualizar OU</h4>
+                <button id="btn-selecionar-foto">SELECIONAR ARQUIVO</button>
+            </div>
+            <button id="btn-alterar-foto">Alterar Foto de Perfil</button>
+        </div>
+
+        <div class="profile-info">
+            <div class="informacoes">
+                <h4>Nome:</h4>
+                <input type="text" value="Aluísio Igor Rego Fontes">
+                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
+            </div>
+            <div class="informacoes">
+                <h4>Senha:</h4>
+                <input id="senhaPerfil" type="password" value="euamocorrer">
+                <button id="btn-eye"><img src="{% static "user/svg/eye-svgrepo-com.svg" %}" alt=""></button>
+                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
+
+            </div>
+            <div class="informacoes">
+                <h4>E-mail:</h4>
+                <input type="email" value="euamocorrer@gmail.com">
+                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
+            </div>
+            <div class="btn-salvar-dados">
+                <button id="btnAlteracoes">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "/user/js/user.js" %}"></script>
+{% endblock %}

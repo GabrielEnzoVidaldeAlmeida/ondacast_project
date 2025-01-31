@@ -5,3 +5,24 @@ def Index(request):
 
 def InicialDeslogado(request):
     return render(request, "podcast/inicial_deslogado.html")
+
+def podcastPage(request):
+    return render(request, "podcast/podcast_page.html")
+
+def indexCriador(request):
+    return render(request, "podcast/index_criador.html")
+
+def Favoritos(request):
+    return render(request, "podcast/favoritos.html")
+
+def Downloads(request):
+    return render(request, "podcast/downloads.html")
+
+def AdicionarEpisodio(request):
+    return render(request, "podcast/adicionar_episodio.html")
+
+def EstatisticasCriador(request):
+    return render(request, "podcast/estatisticas_criador.html")
+
+def EditarPerfilCriador(request):
+    return render(request, "podcast/editar_perfil_criador.html")

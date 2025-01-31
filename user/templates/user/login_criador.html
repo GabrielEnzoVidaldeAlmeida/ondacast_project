@@ -17,15 +17,16 @@
         <h2><u>login</u></h2>
         <class class="form">
             <form action="" method="post">
+                <input type="text" name="nome_podcast" id="caixa-texto" placeholder="Nome do Podcast">
                 <input type="text" name="email" id="caixa-texto" placeholder="Email/Usuário">
                 <input type="password" name="password" id="" placeholder="Senha">
             </form>
         </class>
         <class class="login-buttons">
-            <a href="{% url 'index' %}" id="btn-entrar">Entrar</a>
+            <a href="{% url 'index_criador' %}" id="btn-entrar">Entrar</a>
             <a href="#">Esqueceu sua senha?</a>
-            <a href="{% url 'login_criador' %}">Acessar conta de desenvolvedor</a>
-            <p>Não tem uma conta?&nbsp;<a href="{% url 'cadastro_criador' %}">Criar conta</a></p>
+            <a href="{% url 'Login' %}">Acessar conta de ouvinte</a>
+            <p style="margin-top: 69px !important;">Não tem uma conta?&nbsp;<a href="{% url 'cadastro_criador' %}">Criar conta</a></p>
         </class>
     </div>
 </body>

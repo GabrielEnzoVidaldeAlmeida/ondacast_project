@@ -13,19 +13,21 @@
     --card-principal: #23003C;
     --btn-lateral-normal: #7334a4;
     --btn-lateral-clicado: #391c50;
+    --cards-adicionais: #1E1E1E;
 
 }
 /*ZERANDO MARGENS HTML E DEIXA O FOOTER NO FIM DA PÁGINA*/
 body{
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: var(--fundo-principal);
+    
 }
 
 .container-body{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 
 }
 .container-body main{
@@ -34,256 +36,723 @@ body{
 }
 
 /*NAVBAR*/
-
-.navbar{
+.navbar {
     display: flex;
-    align-items:center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.logo{
+.navbar .logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
     display: flex;
     color: var(--cor-fonte);
-    margin-left: 90px;
-    margin-top: 30px;
-    font-size: 24px;
+    margin-top: 1.5vh; 
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
     align-items: center;
-    margin-bottom: 10px;
-}
-.logo img{
-    margin-top: -10px;
+    margin-left: 1vh;
 }
 
-.nav-icons{
-    margin-left: 890px;
-    margin-top: 20px;
-    justify-content: space-between;
-    margin-bottom: 10px;
+
+.logo h1 {
+    font-weight: lighter;
+    font-size: 3vw; 
 }
-.nav-icons a{
-    width: 50px;
-    height: 50px;
+
+.logo img {
+    margin-top: -1vh;
+    width: 4vw; 
 }
-.nav-icons button{
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 61vw;
+}
+
+.nav-icons a {
+    width: 4.5vw; 
+    height: 4.5vw;
+}
+.nav-icons button {
     all: unset;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 1vw;
     padding: 0;
     margin: 0;
     font: inherit;
     color: inherit;
     cursor: pointer;
 }
-.nav-icons a:not(:last-child){
-    margin-right: 10px;
-}
-.icone-svg {
-    width: 50px;
-    height: 50px;
-    color: var(--btn-lateral-normal); /* Cor inicial do ícone */
-    transition: color 0.3s ease; /* Transição suave */
-}
-.icone-svg:hover {
-    color: var(--btn-lateral-clicado); /* Cor quando o mouse passa por cima */
-    /*color: #dcdcdc;*/
-}
-.icone-svg-busca{
-    margin-top: 15px;
-    width: 50px;
-    height: 50px;
-    color: var(--btn-lateral-normal); /* Cor inicial do ícone */
-    transition: color 0.3s ease; /* Transição suave */
+
+.nav-icons a:not(:last-child) {
+    margin-right: 1vw;
 }
 
-.profileCard{
+.icone-svg {
+    width: 4.2vw; 
+    height: 4.2vw;
+    color: var(--btn-lateral-normal);
+    transition: color 0.3s ease;
+}
+
+.icone-svg:hover {
+    color: var(--btn-lateral-clicado);
+}
+
+.icone-svg-busca {
+    margin-left: 1vw;
+    margin-top: 1.3vh;
+    width: 3vw; 
+    height: 3vw;
+    color: var(--btn-lateral-normal); 
+    transition: color 0.3s ease; 
+}
+
+.profileCard {
     position: absolute;
-    background-color: #1E1E1E;
-    width: 200px;
-    height: 170px;
-    margin-left: 1250px;
-    margin-top: 250px;
+    z-index: 2;
+    background-color: var(--cards-adicionais);
+    width: 15vw; 
+    margin-left: 70vw;
+    margin-top: 40vh;
     display: none;
 }
-.profileCard li, a{
+
+.profileCard li, a {
     text-decoration: none;
     list-style: none;
 }
-.profileCard ul{
-    margin-left: -15px;
+
+.profileCard ul {
+    margin-left: -1vw;
 }
-.profileCard a{
+
+.profileCard a {
     color: var(--cor-fonte);
     font-family: "Josefin Sans", sans-serif;
 }
 
-.separa-barra{
-    height: 1px;
-    width: 200px;
+.separa-barra {
+    height: 0.1vh; 
+    width: 15vw; 
     background-color: gray;
 }
 
+
 /*RODAPE*/
 
-.links-rodape{
+.itens-rodape {
+    margin-top: 2vh; 
+}
+
+.links-rodape {
     display: flex;
-    margin-left: 100px;
+    justify-content: space-evenly;
     font-family: "Josefin Sans", sans-serif;
     color: var(--cor-fonte);
 }
-.links-rodape a{
+
+.links-rodape a {
     text-decoration: none;
     color: var(--cor-fonte);
 }
-.links{
+
+.links {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-}
-.links a:not(:last-child){
-    margin-bottom: 10px;
-}
-.empresa{
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    margin-bottom: 20px;
-}
-.empresa a:not(:last-child){
-    margin-bottom: 10px;
-}
-.itens-rodape{
-    display: flex;
-    margin-top: 40px;
-}
-.icons-rodape{
-    margin-left: 770px;
-}
-.icons-rodape img{
-    width: 46px;
-    height: 46px;
-}
-.icons-rodape a:not(:last-child){
-    margin-right: 20px;
-}
-.icons-rodape p{
-    margin-top: 40px;
-    font-size: 24px;
+    margin-bottom: 2vh;
 }
 
+.links a:not(:last-child) {
+    margin-bottom: 1.5vh; 
+}
+
+.empresa {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh; 
+}
+
+.empresa a:not(:last-child) {
+    margin-bottom: 1.5vh; 
+}
+
+.icons-rodape {
+    margin-left: 40vw; 
+    margin-top: 5vh; 
+}
+
+.icons-rodape img {
+    width: 3.5vw; 
+    height: 3.5vw;
+}
+
+.icons-rodape a:not(:last-child) {
+    margin-right: 2vw; 
+}
+
+.icons-rodape p {
+    margin-top: 4vh; 
+    font-size: 2vw; 
+}
+
+
 /* MAIN */
-.conteudo-main{
+.conteudo-main {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.card-lateral{
-    height: 840px;
-    width: 300px;
+
+.card-lateral {
+    width: 20vw;  
     background-color: var(--card-login);
     color: var(--cor-fonte);
     justify-items: center;
-}
-.card-lateral h2{
-    margin-top: 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 32px;
-}
-.card-lateral button{
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 16px;
-    color: var(--cor-fonte);
-    border-style: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 8px;
-}
-.card-lateral button:hover{
-    cursor: pointer;
-}
-#btnRecentes{
-    background-color: var(--btn-lateral-clicado);
-    margin-right: 10px;
-}
-#btnSeguindo{
-    background-color: var(--btn-lateral-normal);
-    margin-left: 10px;
-}
-.card-principal{
-    height: 840px;
-    width: 1100px;
-    background-color: var(--card-principal);
-    margin-left: 12px;
-}
-.card-principal h2{
-    margin-top: 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 32px;
-    color: var(--cor-fonte);
-    margin-left: 32px;
+    transition: transform 0.3s ease;
+    margin-right: 1.5vh;
 }
 
-.barra-branca{
-    width: 240px;
-    height: 1px;
-    background-color: #FFFFFF;
-    margin-top: 20px;
+.card-lateral h2 {
+    margin-top: 3vh;
+    font-family: "Inter", sans-serif;
+    font-size: 2vw; 
 }
-.containerRecentes{
+
+.card-lateral button {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1vw; 
+    color: var(--cor-fonte);
+    border-style: none;
+    width: 8vw; 
+    height: 5vh; 
+    border-radius: 1vh;
+    margin-left: 0.5vw; 
+    margin-right: 0.5vw;
+}
+
+.card-lateral button:hover {
+    cursor: pointer;
+}
+
+#btnRecentes {
+    background-color: var(--btn-lateral-clicado);
+}
+
+#btnSeguindo {
+    background-color: var(--btn-lateral-normal);
+}
+
+.card-principal { 
+    width: 70vw;
+    min-height: 90vh;  
+    background-color: var(--card-principal);
+    transition: transform 0.3s ease; 
+}
+
+.card-principal h2 {
+    margin-top: 3vh; 
+    font-family: "Inter", sans-serif;
+    font-size: 2vw; 
+    color: var(--cor-fonte);
+    margin-left: 2vw;
+}
+
+.barra-branca {
+    width: 15vw; 
+    height: 0.2vh; 
+    margin-top: 2vh;
+}
+
+.containerRecentes,
+.containerSeguindo {
     font-family: "Josefin Sans", sans-serif;
 }
-.containerSeguindo{
-    font-family: "Josefin Sans", sans-serif;
+
+.recentes img {
+    margin-right: 0.5vw;
+    margin-left: 1.5vw;
+    height: 8vh;
+    width: 4.5vw;
 }
-.recentes img{
-    margin-right: 4px;
-    margin-left: 20px;
-}
-.recentes a{
+
+.recentes a {
     text-decoration: none;
-    width: 300px;
+    width: 20vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:left;
+    justify-content: left;
 }
-.recentes a:hover{
-    background-color: var(--btn-lateral-normal);
+
+.recentes a:hover {
+    background-color: var(--fundo-principal);
     transition: 250ms;
 }
-.info-card-recentes h4{
+
+.info-card-recentes {
+    font-size: 1vw;
+    padding-left: 0.3vw;
+}
+
+.info-card-recentes h4 {
     color: var(--cor-fonte);
 }
-.info-card-recentes p{
-    margin-top: -10px;
-    font-size: 16px;
+
+.info-card-recentes p {
+    margin-top: -0.5vh;
+    font-size: 1vw; 
     font-weight: 100;
     color: var(--cor-fonte);
 }
 
-.seguindo img{
-    margin-right: 4px;
-    margin-left: 20px;
-    margin-top: 10.275px;
-    margin-bottom: 10.275px;
+.seguindo img {
+    margin-right: 0.5vw;
+    margin-left: 1.5vw;
+    margin-top: 1.1vh;
+    margin-bottom: 1.1vh;
+    width: 4vw;
 }
-.seguindo a{
+
+.seguindo a {
     text-decoration: none;
-    width: 300px;
+    width: 20vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:left;
+    justify-content: left;
 }
-.seguindo a:hover{
-    background-color: var(--btn-lateral-normal);
+
+.seguindo a:hover {
+    background-color: var(--fundo-principal);
     transition: 250ms;
 }
-.info-card-seguindo h4{
+
+.info-card-seguindo h4 {
     color: var(--cor-fonte);
-    margin-left: 5px;
+    margin-left: 0.3vw;
+    font-size: 2vh;
+}
+
+
+
+/* CARD PRINCIPAL */
+.carrosselRecentes {
+    position: relative;
+    overflow: hidden;
+}
+
+.horizontal-scroll {
+    position: relative;
+    margin-left: 5vw;
+}
+
+.recentes-container {
+    display: flex;
+    gap: 1.5vw;
+    overflow-x: auto;
+    width: 62vw;
+}
+
+@-moz-document url-prefix(){
+    .recentes-container {
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--btn-lateral-normal) black;
+    }
+}
+
+.recentes-container::-webkit-scrollbar {
+    height: 8px; /* Define a altura da barra de rolagem horizontal */
+}
+
+.recentes-container::-webkit-scrollbar-track {
+    background-color: var(--btn-lateral-clicado); /* Cor do track da barra de rolagem */
+    border-radius: 10px; /* Torna o track arredondado */
+}
+
+.recentes-container::-webkit-scrollbar-thumb {
+    background-color: var(--btn-lateral-normal); /* Cor do thumb da barra de rolagem */
+    border-radius: 10px; /* Torna o thumb arredondado */
+    transition: background-color 300ms ease;
+}
+
+.card-recentes {
+    flex: 0 0 auto;
+    width: 13vw; 
+}
+
+.card-recentes img {
+    border-radius: 0.63vw;
+    width: 13vw;
+    height: 20vh;
+}
+
+.card-recentes h3 {
+    font-size: 1.09vw; 
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+    margin-top: 0.4vh; 
+}
+
+.card-recentes p {
+    font-size: 1.1vw; 
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--cor-fonte);
+    margin-top: -1.5vh; 
+}
+@media(max-width:800px){
+    /* MAIN */
+    .conteudo-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-lateral {
+        display: none;
+    }
+
+    .card-lateral h2 {
+        margin-top: 3vh;
+        font-family: "Inter", sans-serif;
+        font-size: 2vw; 
+    }
+
+    .card-lateral button {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1vw; 
+        color: var(--cor-fonte);
+        border-style: none;
+        width: 8vw; 
+        height: 5vh; 
+        border-radius: 1vh;
+        margin-left: 0.5vw; 
+        margin-right: 0.5vw;
+    }
+
+    .card-lateral button:hover {
+        cursor: pointer;
+    }
+
+    #btnRecentes {
+        background-color: var(--btn-lateral-clicado);
+    }
+
+    #btnSeguindo {
+        background-color: var(--btn-lateral-normal);
+    }
+
+    .card-principal { 
+        width: 97vw;  
+        background-color: var(--card-principal);
+        transition: transform 0.3s ease; 
+    }
+
+    .card-principal h2 {
+        margin-top: 3vh; 
+        font-family: "Inter", sans-serif;
+        font-size: 2vw; 
+        color: var(--cor-fonte);
+        margin-left: 2vw;
+    }
+
+    .barra-branca {
+        width: 15vw; 
+        height: 0.2vh; 
+        margin-top: 2vh;
+    }
+
+    .containerRecentes,
+    .containerSeguindo {
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .recentes img {
+        margin-right: 0.5vw;
+        margin-left: 1.5vw;
+        height: 8vh;
+        width: 5vw;
+    }
+
+    .recentes a {
+        text-decoration: none;
+        width: 20vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .recentes a:hover {
+        background-color: var(--fundo-principal);
+        transition: 250ms;
+    }
+
+    .info-card-recentes {
+        font-size: 1vw;
+        padding-left: 0.3vw;
+    }
+
+    .info-card-recentes h4 {
+        color: var(--cor-fonte);
+    }
+
+    .info-card-recentes p {
+        margin-top: -0.5vh;
+        font-size: 1vw; 
+        font-weight: 100;
+        color: var(--cor-fonte);
+    }
+
+    .seguindo img {
+        margin-right: 0.5vw;
+        margin-left: 1.5vw;
+        margin-top: 1.1vh;
+        margin-bottom: 1.1vh;
+        width: 4vw;
+    }
+
+    .seguindo a {
+        text-decoration: none;
+        width: 20vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .seguindo a:hover {
+        background-color: var(--fundo-principal);
+        transition: 250ms;
+    }
+
+    .info-card-seguindo h4 {
+        color: var(--cor-fonte);
+        margin-left: 0.3vw;
+        font-size: 2vh;
+    }
+    * CARD PRINCIPAL */
+    .carrosselRecentes {
+        position: relative;
+        overflow: hidden;
+        width: 100vw; 
+    }
+
+    .horizontal-scroll {
+        position: relative;
+        margin-left: 5vw;
+    }
+
+    .recentes-container {
+        display: flex;
+        gap: 5vw; 
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        width: 87.5vw;
+    }
+
+    .card-recentes {
+        flex: 0 0 auto;
+        width: 13vw; 
+    }
+
+    .card-recentes img {
+        border-radius: 0.63vw;
+        width: 16vw;
+        height: 16vh;
+    }
+
+    .card-recentes h3 {
+        font-size: 1.09vw; 
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--cor-fonte);
+        margin-top: 0.4vh; 
+    }
+
+    .card-recentes p {
+        font-size: 1.1vw; 
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--cor-fonte);
+        margin-top: -1.5vh;
+    }
+
+    /*RODAPE*/
+
+    .itens-rodape {
+        display: none;
+    }
+
+    .links-rodape {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--cor-fonte);
+    }
+
+    .links-rodape a {
+        text-decoration: none;
+        color: var(--cor-fonte);
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vh;
+    }
+
+    .links a:not(:last-child) {
+        margin-bottom: 1.5vh; 
+    }
+
+    .empresa {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vh; 
+    }
+
+    .empresa a:not(:last-child) {
+        margin-bottom: 1.5vh; 
+    }
+
+    .icons-rodape {
+        margin-left: 40vw; 
+        margin-top: 5vh; 
+    }
+
+    .icons-rodape img {
+        width: 3.5vw; 
+        height: 3.5vw;
+    }
+
+    .icons-rodape a:not(:last-child) {
+        margin-right: 2vw; 
+    }
+
+    .icons-rodape p {
+        margin-top: 4vh; 
+        font-size: 2vw; 
+    }
+    /*NAVBAR*/
+    .navbar {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar .logo a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo {
+        display: flex;
+        color: var(--cor-fonte);
+        margin-top: 1.5vh; 
+        font-weight: 300;
+        font-family: "Josefin Sans", sans-serif;
+        align-items: center;
+        margin-left: 1vh;
+    }
+
+    .logo h1 {
+        font-weight: lighter;
+        font-size: 3vw; 
+    }
+
+    .logo img {
+        margin-top: -1vh;
+        width: 4vw; 
+    }
+
+    .nav-icons {
+        display: flex;
+        justify-content: center;
+        margin-left: 61vw;
+    }
+
+    .nav-icons a {
+        width: 4.5vw; 
+        height: 4.5vw;
+    }
+    .nav-icons button {
+        all: unset;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: none;
+        border: none;
+        border-radius: 1vw;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .nav-icons a:not(:last-child) {
+        margin-right: 1vw;
+    }
+
+    .icone-svg {
+        width: 4.2vw; 
+        height: 4.2vw;
+        color: var(--btn-lateral-normal);
+        transition: color 0.3s ease;
+    }
+
+    .icone-svg:hover {
+        color: var(--btn-lateral-clicado);
+    }
+
+    .icone-svg-busca {
+        margin-left: 1vw;
+        margin-top: 1.3vh;
+        width: 3vw; 
+        height: 3vw;
+        color: var(--btn-lateral-normal); 
+        transition: color 0.3s ease; 
+    }
+
+    .profileCard {
+        position: absolute;
+        z-index: 2;
+        background-color: var(--cards-adicionais);
+        width: 15vw; 
+        margin-left: 70vw;
+        margin-top: 40vh;
+        display: none;
+    }
+
+    .profileCard li, a {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .profileCard ul {
+        margin-left: -1vw;
+    }
+
+    .profileCard a {
+        color: var(--cor-fonte);
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .separa-barra {
+        height: 0.1vh; 
+        width: 15vw; 
+        background-color: gray;
+    }
 }
