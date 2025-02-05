@@ -1,5 +1,6 @@
 from django.urls import path
 from podcast.views import *
+from . import views
 
 urlpatterns = [
     path ('index', Index, name='index'),
@@ -8,7 +9,7 @@ urlpatterns = [
     path ('index_criador', indexCriador, name='index_criador'),
     path ('favoritos', Favoritos, name='favoritos'),
     path ('downloads', Downloads, name='downloads'),
-    path ('adicionar_episodio', AdicionarEpisodio, name='adicionar_episodio'),
+    path ('adicionar_episodio', views.AdicionarEpisodio,name='adicionar_episodio'),
     path ('estatisticas_criador', EstatisticasCriador, name='estatisticas_criador'),
     path ('editar_perfil_criador', EditarPerfilCriador, name='editar_perfil_criador'),
 ]
