@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static "/podcast/css/podcast_page.css" %}">
     <link rel="stylesheet" href="{% static "/podcast/css/favoritos.css" %}">
     <link rel="stylesheet" href="{% static "/podcast/css/downloads.css" %}">
+    <link rel="stylesheet" href="{% static "/podcast/css/play.css" %}">
     {% block criadorcss %}
 
     {% endblock %}
@@ -69,9 +70,10 @@
         {% block main %}
         
         {% endblock %}
+       
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="itens-rodape">
             <div class="links-rodape">
                 <div class="links">
@@ -95,9 +97,39 @@
             </div>
         </div>
     </footer>
+    <div class="play">
 
+        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+
+        <div class="inf-play">
+            <h3>Talentos Extraordinarios</h3>
+            <h4>O Poder de Servir</h4>
+        </div>
+        
+        <div class="card-fixo">
+        
+            <div class="controls">
+                <button id="prev"><span>&#9198;</span></button> <!-- Botão de Anterior -->
+                <button id="play"><span>&#9658;</span></button> <!-- Botão de Play/Pause -->
+                <button id="next"><span>&#9197;</span></button> <!-- Botão de Próxima -->
+            </div>
+        
+            
+            <div class="progress-container">
+                <span id="current-time" class="time">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <span id="total-time" class="time">3:30</span>
+            </div>
+        </div>
+</div>
+
+
+    </div>
+    <script src="{% static "/podcast/js/play.js" %}"></script>
     {% block javascript %}
-    
+   
     {% endblock %}
 </body>
 
