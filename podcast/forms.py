@@ -1,5 +1,5 @@
 from django import forms
-from .models import Episodio
+from .models import Episodio, Podcast
 
 class EpisodioForm(forms.ModelForm):
     class Meta:
@@ -8,3 +8,14 @@ class EpisodioForm(forms.ModelForm):
         widgets = {
             'descricao': forms.TextInput(attrs={'maxlength': 140}),
         }
+
+class EditarPodcastForm(forms.ModelForm):
+    class Meta:
+        model = Podcast
+        fields = ['nome', 'descricao', 'foto']
+        widgets = {
+            'descricao': forms.TextInput(attrs={'maxlength': 140}),
+        }
+
+class ExcluirEpisodioForm(forms.ModelForm):
+    episodio_id = forms.IntegerField(widget=forms.HiddenInput())

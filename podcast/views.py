@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .forms import EpisodioForm
+from .models import Episodio, Podcast
+from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 
 @login_required
 
@@ -39,5 +40,27 @@ def EstatisticasCriador(request):
     return render(request, "podcast/estatisticas_criador.html")
 
 def EditarPerfilCriador(request):
-    return render(request, "podcast/editar_perfil_criador.html")
+    podcast = get_object_or_404(Podcast, id= podcast_id, criador=request.user)
 
+    if request.method == 'POST':
+        form = EditarPodcastForm(request.POST, request.FILES, instance=podcast)
+        if form.is_valid():
+            form.save()
+            return redirect('index_criador',podcast_id=podcast.id)
+    else:
+        form = EditarPodcastForm(instance=podcast)
+
+    return render(request, "podcast/editar_perfil_criador.html", {'form': form, 'podcast': podcast})
+
+def ExcluirEpisodio(request):
+    episodio = get_object_or_404(Episodio, id=episodio_id, criador=request.user)
+
+    if request.method == 'POST':
+        form = ExcluirEpisodioForm(request.POST, instance=episodio)
+        if form.is_valid():
+            episodio.delete()
+            return redirect('index_criador', podcast_id=episodio.podcast.id)
+    else:
+        form = ExcluirEpisodioForm(instance=episodio)
+
+    return render(request, "podcast/excluir_episodio.html", {'form': form, 'episodio': episodio})
