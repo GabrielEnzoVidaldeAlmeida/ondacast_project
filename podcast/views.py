@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Episodio, Podcast
 from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
+from django.http import JsonResponse
 
 @login_required
 
@@ -23,18 +24,41 @@ def Favoritos(request):
 def Downloads(request):
     return render(request, "podcast/downloads.html")
 
+
 def AdicionarEpisodio(request):
-    if request.method == 'POST':
-        form = EpisodioForm(request.POST, request.FILES)
-        if form.is_valid():
-            episodio = form.save(commit=False)
-            episodio.criador = request.user
-            episodio.save()
-            return redirect('index_criador')
-    else:
-        form = EpisodioForm()
-        
-    return render(request, "podcast/adicionar_episodio.html", {'form': form})
+    if request.method == "POST":
+        titulo = request.POST.get("titulo")
+        descricao = request.POST.get("descricao")
+        capa = request.FILES.get("capa")
+        arquivo_audio = request.FILES.get("arquivo_audio")
+
+        if not titulo or not descricao or not capa or not arquivo_audio:
+            return JsonResponse({"error": "Todos os campos são obrigatórios"}, status=400)
+
+        # Obtendo um podcast qualquer para associar ao episódio (ajustar depois)
+        podcast = Podcast.objects.first()  # Busca qualquer podcast disponível
+
+        if not podcast:
+            podcast = Podcast.objects.create(
+                criador=None,  # Define sem criador
+                nome="Podcast Padrão",
+                descricao="Podcast gerado automaticamente",
+            )
+        if not request.user.is_authenticated:
+            return JsonResponse({"error": "Usuário não autenticado"}, status=401)
+
+        Episodio.objects.create(
+            podcast=podcast,
+            titulo=titulo,
+            descricao=descricao,
+            capa=capa,
+            arquivo_audio=arquivo_audio,
+            criador=request.user
+        )
+
+        return JsonResponse({"message": "Episódio adicionado com sucesso!"}, status=201)
+
+    return render(request, 'podcast/adicionar_episodio.html')
 
 def EstatisticasCriador(request):
     return render(request, "podcast/estatisticas_criador.html")
