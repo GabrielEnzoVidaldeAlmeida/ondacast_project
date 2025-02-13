@@ -1,6 +1,7 @@
 from django.urls import path
 from podcast.views import *
 from . import views
+from .views import *
 
 urlpatterns = [
     path ('index', Index, name='index'),
