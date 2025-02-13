@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'podcast',
 ]
 
+# Configuração de autenticação de usuário para permitir acessar via email e senha
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',  
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

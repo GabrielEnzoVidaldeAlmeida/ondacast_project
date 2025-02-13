@@ -36,7 +36,8 @@ h2{
     font-family: "Josefin Sans", sans-serif;
     font-size: 40px;
     color: var(--cor-fonte);
-    font-weight: 300;
+    font-weight: 200;
+    margin-bottom: 10px;
 }
 
 .logo{
@@ -57,7 +58,7 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.form input{
+.form p{
     display: flex;
     flex-direction: column;
     font-family: "Josefin Sans", sans-serif;
@@ -76,7 +77,18 @@ h2{
 
     color: var(--cor-fonte);
 }
-.login-buttons #btn-entrar{
+
+.form input{
+    background: none;
+    border: none;
+}
+
+.form span, ul{
+    display: none;
+    border-bottom: none;
+}
+
+.form #btn-entrar{
     margin-top: 40px;
     margin-bottom: 20px;
     color: #000000;
@@ -86,6 +98,7 @@ h2{
     padding: 10px 10px 8px 10px;
     justify-self: center;
     text-decoration: none;
+    display: inherit;
 }
 
 .login-buttons a{
@@ -99,10 +112,11 @@ h2{
     color: var(--cor-fonte);
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 a{
     font-family: "Josefin Sans", sans-serif;
     color: var(--cor-fonte);
 }
+

@@ -15,18 +15,31 @@
             <img src="{% static "/user/img/headphones.png" %}" alt="">
         </div>
         <h2><u>login</u></h2>
-        <class class="form">
-            <form action="" method="post">
-                <input type="text" name="email" id="caixa-texto" placeholder="Email/Usuário">
-                <input type="password" name="password" id="" placeholder="Senha">
+        <div class="form">
+            <form method="post" action="{% url 'Login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="btn-entrar" type="submit">Entrar</button>
             </form>
-        </class>
+        </div>
+        {% if form.errors %}
+            <div id="loginErrors">
+                <ul>
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
         <class class="login-buttons">
-            <a href="{% url 'index' %}" id="btn-entrar">Entrar</a>
+            
             <a href="#">Esqueceu sua senha?</a>
             <a href="{% url 'login_criador' %}">Acessar conta de desenvolvedor</a>
-            <p>Não tem uma conta?&nbsp;<a href="{% url 'cadastro_criador' %}">Criar conta</a></p>
+            <p>Não tem conta?&nbsp;<a href="{% url 'cadastrar' %}">Cadastrar</a></p>
         </class>
+        
     </div>
 </body>
 </html>
