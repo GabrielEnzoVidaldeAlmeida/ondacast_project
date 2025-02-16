@@ -46,7 +46,10 @@ INSTALLED_APPS = [
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.AllowAllUsersModelBackend',  
 ]
-
+LOGIN_URL = 'login'
+#LOGIN_REDIRECT_URL="index"
+#LOGOUT_REDIRECT_URL="login"
+SESSION_ENGINE = 'django.contrib.sessions.backends.db' 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -62,7 +65,11 @@ ROOT_URLCONF = 'ondacast.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+             BASE_DIR / 'user/templates', 
+             BASE_DIR / 'podcast/templates',
+        ],
+       
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

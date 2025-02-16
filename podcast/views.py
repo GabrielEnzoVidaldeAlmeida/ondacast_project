@@ -5,26 +5,25 @@ from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 from django.http import JsonResponse
 
 @login_required
-
 def Index(request):
     return render(request, "podcast/index.html")
 
 def InicialDeslogado(request):
     return render(request, "podcast/inicial_deslogado.html")
-
+@login_required
 def podcastPage(request):
     return render(request, "podcast/podcast_page.html")
-
+@login_required
 def indexCriador(request):
     return render(request, "podcast/index_criador.html")
-
+@login_required
 def Favoritos(request):
     return render(request, "podcast/favoritos.html")
-
+@login_required
 def Downloads(request):
     return render(request, "podcast/downloads.html")
 
-
+@login_required
 def AdicionarEpisodio(request):
     if request.method == "POST":
         titulo = request.POST.get("titulo")

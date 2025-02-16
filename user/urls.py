@@ -4,10 +4,10 @@ from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
-    path ('login/', Login, name="Login"),
-    path ('cadastro/', Cadastro,  name="cadastrar"),
-    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
-
+    path ('login/',entrar, name="login"),
+    path ('cadastro/', cadastrar,  name="cadastro"),
+    path('logout/', sair, name="logout"),
+    path("excluir_conta", excluir_conta, name="excluir_conta"),
     path ('perfil', Perfil, name="perfil"),
     path ('configuracoes', Configuracoes, name="configuracoes"),
     path ('login_criador', Login_Criador, name="login_criador"),

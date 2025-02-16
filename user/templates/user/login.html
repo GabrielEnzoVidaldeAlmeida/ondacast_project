@@ -2,44 +2,46 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static "/user/css/logins.css" %}">
-</head>
-<body>
-    <div class="card-login">
-        <div class="logo">
-            <h1><u>Onda Cast</u></h1>
-            <img src="{% static "/user/img/headphones.png" %}" alt="">
-        </div>
-        <h2><u>login</u></h2>
-        <div class="form">
-            <form method="post" action="{% url 'Login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button id="btn-entrar" type="submit">Entrar</button>
-            </form>
-        </div>
-        {% if form.errors %}
-            <div id="loginErrors">
-                <ul>
-                    {% for field, errors in form.errors.items %}
-                        {% for error in errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    {% endfor %}
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "/user/css/logins.css" %}">
+    </head>
+    <body>
+        <div class="card-login">
+            <div class="logo">
+                <h1><u>Onda Cast</u></h1>
+                <img src="{% static "/user/img/headphones.png" %}" alt>
             </div>
-        {% endif %}
-        <class class="login-buttons">
-            
-            <a href="#">Esqueceu sua senha?</a>
-            <a href="{% url 'login_criador' %}">Acessar conta de desenvolvedor</a>
-            <p>Não tem conta?&nbsp;<a href="{% url 'cadastrar' %}">Cadastrar</a></p>
-        </class>
-        
-    </div>
-</body>
-</html>
+            <h2><u>login</u></h2>
+            <div class="form">
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="username">Usuário:</label>
+                    <input type="text" name="username" required>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" required>
+
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <class class="login-buttons">
+
+                    <a href="#">Esqueceu sua senha?</a>
+                    <a href="{% url 'login_criador' %}">Acessar conta de
+                        desenvolvedor</a>
+                    <p>Não tem conta?&nbsp;<a
+                            href="{% url 'cadastro' %}">Cadastrar</a></p>
+                </class>
+
+            </div>
+        </body>
+    </html>

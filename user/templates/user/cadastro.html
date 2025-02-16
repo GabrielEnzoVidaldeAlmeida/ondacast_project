@@ -1,39 +1,46 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static "/user/css/logins.css" %}">
-</head>
-<body>
-    <div class="card-login">
-        <div class="logo">
-            <h1><u>Onda Cast</u></h1>
-            <img src="{% static "/user/img/headphones.png" %}" alt="">
-        </div>
-        <h2><u>Cadastro</u></h2>
-        <div class="form">
-            <form method="post" action="{% url 'cadastrar' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button id="btn-entrar" type="submit">Cadastrar</button>
-            </form>
-        </div>
-        {% if form.errors %}
-            <div id="registerErrors">
-                <ul>
-                    {% for field, errors in form.errors.items %}
-                        {% for error in errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    {% endfor %}
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "/user/css/logins.css" %}">
+    </head>
+    <body>
+        <div class="card-login">
+            <div class="logo">
+                <h1><u>Onda Cast</u></h1>
+                <img src="{% static "/user/img/headphones.png" %}" alt>
             </div>
-        {% endif %}
-        <div class="login-buttons">
-            <p>Já tem conta?&nbsp;<a href="{% url 'Login' %}">Acessar conta</a></p>
-        </div>
-</body>
-</html>
+            <h2><u>Cadastro</u></h2>
+            <div class="form">
+                {% if messages %}
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                {% endif %}
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="username">Usuário:</label>
+                    <input type="text" name="username" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" required>
+
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" required>
+
+                    <label for="password2">Confirme a Senha:</label>
+                    <input type="password" name="password2" required>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+
+                <div class="login-buttons">
+                    <p>Já tem conta?&nbsp;<a href="{% url 'login' %}">Acessar
+                            conta</a></p>
+                </div>
+            </body>
+        </html>

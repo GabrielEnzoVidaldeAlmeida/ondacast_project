@@ -42,7 +42,7 @@
             </ul>
             <div class="separa-barra"></div>
             <ul>
-                <li><a href="{% url 'Login' %}">Sair</a></li>
+                <li><a href="{% url 'login' %}">Sair</a></li>
             </ul>
         </div>
     </div>
@@ -156,8 +156,14 @@
                 <li>Perderá seus podcasts baixados e salvos</li>
                 <li>O seu histórico de podcasts será perdido</li>
             </ul>
-            <button id="excluir-conta"><a href="{% url 'Login' %}"> SIM, quero excluir minha conta </a></button>
-            <button id="manter-conta">NÃO, quero manter minha conta</button>
+            <div>
+            <form action="{% url 'excluir_conta' %}" method="POST">
+                {% csrf_token %}
+                <button id="excluir-conta" type="submit">Sim, excluir minha conta</button>
+            </form>
+            
+            <button id="manter-conta" href="{% url 'configuracoes' %}">Cancelar</button>
+            </div>
         </div>
     </div>  
 </div>
