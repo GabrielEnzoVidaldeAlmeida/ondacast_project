@@ -12,5 +12,4 @@ urlpatterns = [
     path ('downloads', Downloads, name='downloads'),
     path ('adicionar_episodio', views.AdicionarEpisodio,name='adicionar_episodio'),
     path ('estatisticas_criador', EstatisticasCriador, name='estatisticas_criador'),
-    path ('editar_perfil_criador', EditarPerfilCriador, name='editar_perfil_criador'),
 ]

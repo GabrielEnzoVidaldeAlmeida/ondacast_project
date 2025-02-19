@@ -4,6 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
+from podcast.models import Podcast
+from podcast.forms import PodcastForm
+
 
 def entrar(request):
     if request.method == "POST":
@@ -62,6 +65,26 @@ def excluir_conta(request):
 def sair(request):
     logout(request)
     return redirect("login")
+
+@login_required
+def editar_podcast(request):
+    try:
+        podcast = Podcast.objects.get(usuario=request.user)
+    except Podcast.DoesNotExist:
+        podcast = None
+
+    if request.method == "POST":
+        form = PodcastForm(request.POST, request.FILES, instance=podcast)
+        if form.is_valid():
+            podcast = form.save(commit=False)
+            podcast.usuario = request.user
+            podcast.save()
+            messages.success(request, "Podcast atualizado com sucesso!")
+            return redirect("editar_perfil_criador")
+    else:
+        form = PodcastForm(instance=podcast)
+
+    return render(request, 'editar_perfil_criador.html', {'form': form, 'podcast': podcast})
 
 
 def inicial_deslogado(request):

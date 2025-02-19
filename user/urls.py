@@ -1,4 +1,5 @@
 from django.urls import path
+from .views import *
 from user.views import *
 from django.contrib.auth.views import LogoutView
 
@@ -12,4 +13,5 @@ urlpatterns = [
     path ('configuracoes', Configuracoes, name="configuracoes"),
     path ('login_criador', Login_Criador, name="login_criador"),
     path ('cadastro_criador', Cadastro_Criador, name="cadastro_criador"),
+    path ('editar_poscast/', editar_podcast, name='editar_podcast'),
 ]

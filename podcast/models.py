@@ -15,7 +15,7 @@ class Episodio(models.Model):
         return self.titulo
 
 class Podcast(models.Model):
-    criador = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True) #criador do podcast NÃO é obrigatório, vou mudar depois da autenticação
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     foto = models.ImageField(upload_to='podcast/media/fotos')

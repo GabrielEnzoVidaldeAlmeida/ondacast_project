@@ -90,17 +90,26 @@
     </div>
 
     <div class="card-principal">
-        <h2>Talentos Extraordinários  <a href="#" style="color:rgb(143, 143, 143); text-decoration: none;">&#9998;</a> </h2>
+        <h2>
+            {% if podcast %}
+                Editar Podcast
+            {% else %}
+                Criar Podcast
+            {% endif %}
+        </h2>
     <div class="podcast-content">
         <div class="sobre-podcast">
-            <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-            <div class="sobre">
-                <div class="">
-                    <h3>Sobre:</h3>
-                    
-                </div>
-                <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...  <a href="#" style="color:rgb(143, 143, 143); text-decoration: none;">&#9998;</a>  </p>
-            </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn-salvar">
+                    {% if podcast %}
+                        Salvar alterações
+                    {% else %}
+                        Criar Podcast
+                    {% endif %}
+                </button>
+            </form>
         </div>
 
         <div class="barra-branca-separadora"></div>
