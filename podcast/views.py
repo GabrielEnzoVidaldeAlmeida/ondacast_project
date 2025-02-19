@@ -23,7 +23,7 @@ def Favoritos(request):
 def Downloads(request):
     return render(request, "podcast/downloads.html")
 
-@login_required
+
 def AdicionarEpisodio(request):
     if request.method == "POST":
         titulo = request.POST.get("titulo")
