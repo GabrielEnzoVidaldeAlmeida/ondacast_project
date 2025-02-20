@@ -15,17 +15,26 @@
         </div>
         <h2><u>Cadastro</u></h2>
         <class class="form">
-            <form action="" method="post">
-                <input type="text" name="nome_podcast" id="caixa-texto" placeholder="Nome do Podcast">
-                <input type="text" name="email" id="caixa-texto" placeholder="Email/Usuário">
-                <input type="text" name="password" id="" placeholder="Senha">
-                <input type="text" name="password" id="" placeholder="Confirmar a senha">
+            <form method="POST">
+                {% csrf_token %}
+            
+                <label for="id_nome_podcast">Nome do Podcast:</label>
+                <input type="text" name="nome_podcast" id="id_nome_podcast" required>
+            
+                <label for="id_email">E-mail:</label>
+                <input type="email" name="email" id="id_email" required>
+            
+                <label for="id_password1">Senha:</label>
+                <input type="password" name="password1" id="id_password1" required>
+            
+                <label for="id_password2">Confirme a Senha:</label>
+                <input type="password" name="password2" id="id_password2" required>
+            
+                <button type="submit">Cadastrar</button>
             </form>
         </class>
         <class class="login-buttons">
-            <a href="{% url 'index_criador' %}" id="btn-entrar">Cadastrar</a>
-
-            <p>Já tem conta de criador?&nbsp;<a href="{% url 'login_criador' %}">Acessar conta</a></p>
+            <p>Já tem conta de criador?<a href="{% url 'login_criador' %}">Acessar conta</a></p>
         </class>
 </body>
 </html>

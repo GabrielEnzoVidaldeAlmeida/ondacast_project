@@ -14,7 +14,7 @@ def InicialDeslogado(request):
 def podcastPage(request):
     return render(request, "podcast/podcast_page.html")
 @login_required
-def indexCriador(request):
+def index_Criador(request):
     return render(request, "podcast/index_criador.html")
 @login_required
 def Favoritos(request):
@@ -58,12 +58,12 @@ def AdicionarEpisodio(request):
         return JsonResponse({"message": "Episódio adicionado com sucesso!"}, status=201)
 
     return render(request, 'podcast/adicionar_episodio.html')
-
+@login_required
 def EstatisticasCriador(request):
     return render(request, "podcast/estatisticas_criador.html")
-
+@login_required
 def EditarPerfilCriador(request):
-    podcast = get_object_or_404(Podcast, id= podcast_id, criador=request.user)
+    podcast = get_object_or_404(Podcast, criador=request.user)
 
     if request.method == 'POST':
         form = EditarPodcastForm(request.POST, request.FILES, instance=podcast)
@@ -74,9 +74,9 @@ def EditarPerfilCriador(request):
         form = EditarPodcastForm(instance=podcast)
 
     return render(request, "podcast/editar_perfil_criador.html", {'form': form, 'podcast': podcast})
-
+@login_required
 def ExcluirEpisodio(request):
-    episodio = get_object_or_404(Episodio, id=episodio_id, criador=request.user)
+    episodio = get_object_or_404(Episodio, criador=request.user)
 
     if request.method == 'POST':
         form = ExcluirEpisodioForm(request.POST, instance=episodio)
