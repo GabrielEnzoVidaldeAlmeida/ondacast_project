@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 
 class Episodio(models.Model):
     episodio_id = models.AutoField(primary_key=True)
-    criador = models.ForeignKey(User, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=100)
     descricao = models.TextField()
     capa = models.ImageField(upload_to='podcast/media/capas')
@@ -15,7 +14,6 @@ class Episodio(models.Model):
         return self.titulo
 
 class Podcast(models.Model):
-    criador = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True) #criador do podcast NÃO é obrigatório, vou mudar depois da autenticação
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     foto = models.ImageField(upload_to='podcast/media/fotos')
