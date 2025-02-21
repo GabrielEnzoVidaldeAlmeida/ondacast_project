@@ -89,16 +89,18 @@
     </div>
 
 <div class="card-principal">
-    <h2>Talentos Extraordinários</h2>
+    <h2>{{podcast.nome}}</h2>
     <div class="podcast-content">
         <div class="sobre-podcast">
-            <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+            
+            <img src="{% if podcast.foto %}{{ podcast.foto.url }}{% else %}{% static 'user/img/user-default.jpg' %}{% endif %}" alt="Foto do Podcast">
+           
             <div class="sobre">
                 <div class="">
                     <h3>Sobre:</h3>
                     
                 </div>
-                <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...</p>
+                <p>{{podcast.descricao}}</p>
             </div>
         </div>
 
@@ -106,14 +108,16 @@
 
         <div class="eps-podcast">
             <h3>Episódios:</h3>
-            <div class="card-ep">
-                
-                <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                <div class="info-ep">
-                    <h4>O Poder de Servir</h4>
-                    <span>12/12/2012 - 2H</span>
-                    <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                </div>  
-            </div>
+                <ul>
+                    {% for episodio in episodios %}
+                        <li>
+                            <img src="{{ episodio.capa.url }}" alt="Capa do episódio" style="width: 100px; height: auto;">
+                            <strong>{{ episodio.titulo }}</strong> - {{ episodio.descricao }}
+                        </li>
+                    {% empty %}
+                        <li>Você ainda não adicionou episódios.</li>
+                    {% endfor %}
+                </ul>
+
 </div>
 {% endblock%}

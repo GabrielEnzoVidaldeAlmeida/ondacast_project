@@ -1,6 +1,11 @@
 from django import forms
 from .models import Episodio, Podcast
 
+class PodcastForm(forms.ModelForm):
+    class Meta:
+        model = Podcast
+        fields= ['nome','descricao','foto']
+
 class EpisodioForm(forms.ModelForm):
     class Meta:
         model = Episodio

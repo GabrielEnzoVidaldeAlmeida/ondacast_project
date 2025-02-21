@@ -1,8 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Episodio, Podcast
-from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 from django.http import JsonResponse
+
+
+
+from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
+
+
 
 @login_required
 def Index(request):
@@ -14,8 +20,21 @@ def InicialDeslogado(request):
 def podcastPage(request):
     return render(request, "podcast/podcast_page.html")
 @login_required
+
+
 def index_Criador(request):
-    return render(request, "podcast/index_criador.html")
+    try:
+        podcast = Podcast.objects.get(usuario=request.user)
+        episodios = Episodio.objects.filter(podcast=podcast)  
+    except Podcast.DoesNotExist:
+        podcast = None
+        episodios = []
+
+    return render(request, 'podcast/index_criador.html', {
+        'podcast': podcast,
+        'episodios': episodios  
+    })
+
 @login_required
 def Favoritos(request):
     return render(request, "podcast/favoritos.html")
@@ -31,20 +50,12 @@ def AdicionarEpisodio(request):
         capa = request.FILES.get("capa")
         arquivo_audio = request.FILES.get("arquivo_audio")
 
+        podcast = Podcast.objects.filter(usuario=request.user).first()
+
         if not titulo or not descricao or not capa or not arquivo_audio:
-            return JsonResponse({"error": "Todos os campos são obrigatórios"}, status=400)
+            messages.error(request, "Por favor, preencha todos os campos!")
+            return render(request, 'podcast/adicionar_episodio.html')
 
-        # Obtendo um podcast qualquer para associar ao episódio (ajustar depois)
-        podcast = Podcast.objects.first()  # Busca qualquer podcast disponível
-
-        if not podcast:
-            podcast = Podcast.objects.create(
-                criador=None,  # Define sem criador
-                nome="Podcast Padrão",
-                descricao="Podcast gerado automaticamente",
-            )
-        if not request.user.is_authenticated:
-            return JsonResponse({"error": "Usuário não autenticado"}, status=401)
 
         Episodio.objects.create(
             podcast=podcast,
@@ -52,38 +63,41 @@ def AdicionarEpisodio(request):
             descricao=descricao,
             capa=capa,
             arquivo_audio=arquivo_audio,
-            criador=request.user
         )
 
-        return JsonResponse({"message": "Episódio adicionado com sucesso!"}, status=201)
+        messages.success(request, "Episódio adicionado com sucesso!")
+        return redirect("editar_perfil_criador")
 
     return render(request, 'podcast/adicionar_episodio.html')
+
+
 @login_required
+
 def EstatisticasCriador(request):
     return render(request, "podcast/estatisticas_criador.html")
+
+#@login_required
+#def EditarPerfilCriador(request):
+#   podcast = get_object_or_404(Podcast, usuario=request.user)
+
+#    if request.method == 'POST':
+#       form = EditarPodcastForm(request.POST, request.FILES, instance=podcast)
+#        if form.is_valid():
+#            form.save()
+#            return redirect('index_criador',podcast_id=podcast.id)
+#    else:
+#       form = EditarPodcastForm(instance=podcast)
+#
+#    return render(request, "podcast/editar_perfil_criador.html", {'form': form, 'podcast': podcast})
+
+
 @login_required
-def EditarPerfilCriador(request):
-    podcast = get_object_or_404(Podcast, criador=request.user)
-
-    if request.method == 'POST':
-        form = EditarPodcastForm(request.POST, request.FILES, instance=podcast)
-        if form.is_valid():
-            form.save()
-            return redirect('index_criador',podcast_id=podcast.id)
-    else:
-        form = EditarPodcastForm(instance=podcast)
-
-    return render(request, "podcast/editar_perfil_criador.html", {'form': form, 'podcast': podcast})
-@login_required
-def ExcluirEpisodio(request):
-    episodio = get_object_or_404(Episodio, criador=request.user)
-
-    if request.method == 'POST':
-        form = ExcluirEpisodioForm(request.POST, instance=episodio)
-        if form.is_valid():
+def deletar_episodio(request, episodio_id): 
+    if request.method == "POST":
+        try:
+            episodio = Episodio.objects.get(episodio_id=episodio_id)  
             episodio.delete()
-            return redirect('index_criador', podcast_id=episodio.podcast.id)
-    else:
-        form = ExcluirEpisodioForm(instance=episodio)
-
-    return render(request, "podcast/excluir_episodio.html", {'form': form, 'episodio': episodio})
+            return JsonResponse({"success": True})
+        except Episodio.DoesNotExist:
+            return JsonResponse({"success": False, "error": "Episódio não encontrado"}, status=404)
+    return JsonResponse({"success": False, "error": "Método inválido"}, status=400)

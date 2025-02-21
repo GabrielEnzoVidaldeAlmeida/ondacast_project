@@ -1,9 +1,14 @@
+import django
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.db import IntegrityError 
+
+from podcast.forms import PodcastForm
+from podcast.models import Podcast, Episodio
 
 
 def entrar(request):
@@ -85,14 +90,38 @@ def cadastro_criador(request):
 
             usuario.groups.add(grupo)
             messages.success(request, "Podcast cadastrado com sucesso!")
-            return redirect("login_criador")  
+            return redirect("editar_perfil_criador")  
         
         except IntegrityError:
             messages.error(request, "Nome do podcast ou e-mail já está em uso. Escolha outro.")
             return redirect("cadastro_criador")
 
     return render(request, "user/cadastro_criador.html")
-   
+
+
+@login_required
+def editar_podcast(request):
+    try:
+        podcast = Podcast.objects.get(usuario=request.user)
+        episodios = Episodio.objects.filter(podcast=podcast)
+    except Podcast.DoesNotExist:
+        podcast = None
+        episodios = []
+
+    if request.method == 'POST':
+        form = PodcastForm(request.POST,request.FILES, instance=podcast)
+        if form.is_valid():
+            podcast=form.save(commit=False)
+            podcast.usuario = request.user
+            podcast.save()
+            return redirect('editar_perfil_criador')
+    else:
+        form = PodcastForm(instance=podcast)
+
+    return render(request,'podcast/editar_perfil_criador.html', {
+        'form':form,
+        'podcast':podcast,
+        'episodios':episodios})
 
 @login_required
 def excluir_conta(request):
