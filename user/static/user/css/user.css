@@ -187,7 +187,8 @@
 
 .configs{
     display: flex;
-    margin-left: 64px;
+    margin-left: 19px;
+    margin-bottom: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -315,6 +316,7 @@ h3{
         border-radius: 8px;
     }
 }
+
 
 /*-------------------------------*/
 

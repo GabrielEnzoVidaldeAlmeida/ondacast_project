@@ -31,18 +31,15 @@
             <ul>
                 <li><a href="{% url 'perfil' %}">Conta</a></li>
             </ul>
+            
             <ul>
-                <li><a href="{% url 'configuracoes' %}">Configurações</a></li>
+                <li><a
+                        href="{% url 'favoritos' %}">Favoritos</a></li>
             </ul>
-            <ul>
-                <li><a href="">Favoritos</a></li>
-            </ul>
-            <ul>
-                <li><a href="">Downloads</a></li>
-            </ul>
+            
             <div class="separa-barra"></div>
             <ul>
-                <li><a href="{% url 'login' %}">Sair</a></li>
+                <li><a href="{% url 'logout' %}">Sair</a></li>
             </ul>
         </div>
     </div>
@@ -152,6 +149,32 @@
                 <button id="btnAlteracoes">Salvar Alterações</button>
             </div>
         </div>
+        <div class="configs configs-btns">
+            <div class="btn-criar-conta-criador">
+                <a href="{% url 'login_criador' %}"><button>Criar conta de CRIADOR</button></a>
+            </div>
+            <div class="btn-excluir-conta">
+                <button>Excluir Conta</button>
+            </div>  
+        </div>
+
+        <div class="card-excluir-conta">
+            <h3>Deseja realmente excluir a sua conta?</h3>
+            <ul>
+                <li>Não receberá mais notificações dos seus podcasts favoritos</li>
+                <li>Perderá seus podcasts baixados e salvos</li>
+                <li>O seu histórico de podcasts será perdido</li>
+            </ul>
+            <div>
+            <form action="{% url 'excluir_conta' %}" method="POST">
+                {% csrf_token %}
+                <button id="excluir-conta" type="submit">Sim, excluir minha conta</button>
+            </form>
+            
+            <button id="manter-conta" href="{% url 'perfil' %}">Cancelar</button>
+            </div>
+        </div>
+    </div>  
     </div>
     
 </div>

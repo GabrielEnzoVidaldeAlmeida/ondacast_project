@@ -124,7 +124,7 @@ def inicial_deslogado(request):
     return render(request, "user/inicial_deslogado.html")
 
 def Perfil(request):
-    return render(request, "user/perfil")
+    return render(request, "user/perfil.html")
 
 def Configuracoes(request):
     return render(request, "user/configuracoes.html")

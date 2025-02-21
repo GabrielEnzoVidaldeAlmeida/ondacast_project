@@ -4,152 +4,93 @@
     left: 50%;
     transform: translateX(-50%);
     background: rgba(17, 0, 34, 0.9);
-    height: 17vh;
-    width: 90.7vw;
+    height: 12vh;
+    width: 87vw;
     box-shadow: 0 0.42vw 1.04vw rgba(0, 0, 0, 0.2);
     border-radius: 2vh;
-    text-align: center;
-    
-}
-
-.play img {
-    width: 9vw;
-    height: 13vh;
-    margin-left: 2vh;
-    margin-top: 2vh;
-    margin-right: 170vh;
-}
-
-.inf-play {
-    color: aliceblue;
-    position: fixed;
-    bottom: 0vh;
-    left: 12%;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.inf-play h3 {
-    font-size: 3vh;
-    margin-right: 10vh;
-    margin-bottom: -1vh;
-}
-
-.inf-play h4 {
-    font-size: 2.59vh;
-    margin-right: 25vh;
-    margin-bottom: 4vh;
-    font-weight: lighter;
-}
-
-.card-fixo {
-    position: fixed;
-    bottom: 2.08vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18.23vw;
-    border-radius: 1.04vh;
-    text-align: center;
-}
-
-.progress-container {
-    margin-bottom: 2vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin-top: 1.04vh;
+    padding: 1vh 2vw;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    gap: 1vw;
+}
+
+.music-info img {
+    width: 5vh;
+    height: 5vh;
+}
+
+.music-details {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.music-details h4 {
+    margin: 0;
+    font-size: 2.2vh;
+    font-weight: bold;
+}
+
+.music-details p {
+    margin: 0;
+    font-size: 1.6vh;
+    color: #bbbbbb;
+}
+
+.progress-container {
+    flex-grow: 1;
+    margin: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress-bar {
-    flex-grow: 1;
-    height: 0.62vh;
+    width: 100%;
+    height: 0.5vh;
     background: #5f0096;
-    border-radius: 0.52vh;
+    border-radius: 1vh;
     position: relative;
-    margin: 0 1.04vw;
     cursor: pointer;
 }
 
 .progress {
     width: 0%;
     height: 100%;
-    background: #30004d;
-    border-radius: 0.52vh;
-}
-
-.time {
-    color: #ffffff;
-    font-size: 2vh;
-    min-width: 2.08vw;
-}
-
-.music-info {
-    display: flex;
-    align-items: center;
-    gap: 1.56vw;
-    text-align: left;
-}
-
-.music-info img {
-    width: 2.6vw;
-    height: 2.6vw;
-    border-radius: 0.52vh;
-}
-
-.music-details {
-    color: #ffffff;
-    flex-grow: 1;
-}
-
-.music-details h4 {
-    margin: 0;
-    font-size: 1.67vh;
-}
-
-.music-details p {
-    margin: 0.52vh 0 0;
-    font-size: 1.25vh;
-    color: #ffffff;
-}
-
-.card-fixo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.04vh;
+    background: #ffffff;
+    border-radius: 1vh;
 }
 
 .controls {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2.08vw;
-    width: 100%;
+    gap: 1vw;
 }
 
 .controls button {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2.5vh;
-    color: rgb(255, 255, 255);
 }
 
-.progresso-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0.52vh 0;
+.controls img {
+    width: 2.5vh;
+    height: 2.5vh;
+    filter: invert(1);
 }
 
 .container-volume {
     display: flex;
     align-items: center;
-    gap: 0.52vw;
+    gap: 0.5vw;
 }
 
 .deslizante-volume {
-    width: 4.17vw;
+    width: 4vw;
     cursor: pointer;
 }
