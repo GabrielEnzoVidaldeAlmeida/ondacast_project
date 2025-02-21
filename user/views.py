@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.db import IntegrityError 
 
+from podcast.forms import PodcastForm
+from podcast.models import Podcast
+
 
 def entrar(request):
     if request.method == "POST":
@@ -92,7 +95,26 @@ def cadastro_criador(request):
             return redirect("cadastro_criador")
 
     return render(request, "user/cadastro_criador.html")
-   
+
+
+@login_required
+def editar_podcast(request):
+    try:
+        podcast = Podcast.objects.get(usuario=request.user)
+    except:
+        podcast = None
+
+    if request.method == 'POST':
+        form = PodcastForm(request.POST,request.FILES, instance=podcast)
+        if form.is_valid():
+            podcast=form.save(commit=False)
+            podcast.usuario = request.user
+            podcast.save()
+            return redirect('editar_perfi_criador')
+    else:
+        form = PodcastForm(instance=podcast)
+
+    return render(request,'editar_perfi_criador.html',{'form':form,'podcast':podcast})
 
 @login_required
 def excluir_conta(request):

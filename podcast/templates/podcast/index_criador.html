@@ -89,16 +89,18 @@
     </div>
 
 <div class="card-principal">
-    <h2>Talentos Extraordinários</h2>
+    <h2>{{podcast.nome}} </h2>
     <div class="podcast-content">
         <div class="sobre-podcast">
-            <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
+            {% if podcast.foto %}
+            <img src="{{podcast.foto.url}}" alt="{{podcast.nome}}">
+            {% endif %}
             <div class="sobre">
                 <div class="">
                     <h3>Sobre:</h3>
                     
                 </div>
-                <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...</p>
+                <p>{{podcast.descricao}}</p>
             </div>
         </div>
 
