@@ -36,29 +36,8 @@ body {
     text-transform: capitalize;
     margin-bottom: 20px;
 }
-/* Logo e Nome */
-.logo {
-    display: flex;
-    align-items: center; /* Alinha verticalmente */
-    gap: 10px;
-    margin-left: 95px; /* Espaço entre a imagem e o nome */
-}
 
-.logo h1 {
-    color: #FFFFFF;
-    font-size: 24px;
-    text-transform: capitalize;
-    margin: 0; /* Remove margens extras */
-}
 
-.logo img {
-    width: 50px; /* Ajuste conforme necessário */
-    height: 50px;
-}
-
-h1{
-    color: #CCCCCC;
-}
 /* Estilização do Formulário */
 .form label {
     display: block;
@@ -116,4 +95,5 @@ h1{
     color: white;
     text-decoration: underline;
 }
+
 

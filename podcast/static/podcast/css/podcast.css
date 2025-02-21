@@ -124,7 +124,7 @@ body{
     background-color: var(--cards-adicionais);
     width: 15vw; 
     margin-left: 70vw;
-    margin-top: 40vh;
+    margin-top: 29vh;
     display: none;
 }
 
@@ -702,6 +702,16 @@ body{
         cursor: pointer;
     }
 
+    .pesquisa .input{
+        background-color: #391c50;
+        font-size: 16px;
+        color: #1E1E1E;
+        padding: 15px;
+        height: 40px;
+        width: 40px;
+        transition: width 0.8 ease;
+        border-radius: 25px, 25px, 25px, 25px;
+    }
     .nav-icons a:not(:last-child) {
         margin-right: 1vw;
     }
