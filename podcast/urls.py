@@ -13,4 +13,6 @@ urlpatterns = [
     path ('adicionar_episodio', views.AdicionarEpisodio,name='adicionar_episodio'),
     path ('estatisticas_criador', EstatisticasCriador, name='estatisticas_criador'),
     path ('editar_perfil_criador', editar_podcast, name='editar_perfil_criador'),
+    path('deletar_episodio/<int:episodio_id>/', views.deletar_episodio, name='deletar_episodio'),
+
 ]

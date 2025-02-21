@@ -120,21 +120,26 @@
         <div class="eps-podcast">
             <h3>Episódios:</h3>
             <div class="card-ep">
-                
-                <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                <div class="info-ep">
-                    <h4>O Poder de Servir  </h4>
-                    <div class="info-ep-header">
-                        
-                        <span>12/12/2012 - 2H </span>
-                        <button href="#" class="btn-deletar"> &#128465; </button>  
-                    </div>
-                    <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações." </p>
-                </div>  
+                <ul>
+                    {% for episodio in episodios %}
+                        <li>
+                            <img src="{{ episodio.capa.url }}" alt="Capa do episódio" style="width: 100px; height: auto;">
+                            <strong>{{ episodio.titulo }}</strong> - {{ episodio.descricao }}
+                            <button onclick="deletarEpisodio({{ episodio.episodio_id }})">🗑️</button>
+                        </li>
+                    {% empty %}
+                        <li>Você ainda não adicionou episódios.</li>
+                    {% endfor %}
+                </ul>
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
             </div>
 </div>
 
     </div>
         
     </div>
+
+{% load static %}
+<script src="{% static 'podcast/js/editar_perfil_criador.js' %}"></script>
+
 {% endblock %}

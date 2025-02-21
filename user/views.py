@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.db import IntegrityError 
 
 from podcast.forms import PodcastForm
-from podcast.models import Podcast
+from podcast.models import Podcast, Episodio
 
 
 def entrar(request):
@@ -103,8 +103,10 @@ def cadastro_criador(request):
 def editar_podcast(request):
     try:
         podcast = Podcast.objects.get(usuario=request.user)
-    except:
+        episodios = Episodio.objects.filter(podcast=podcast)
+    except Podcast.DoesNotExist:
         podcast = None
+        episodios = []
 
     if request.method == 'POST':
         form = PodcastForm(request.POST,request.FILES, instance=podcast)
@@ -116,7 +118,10 @@ def editar_podcast(request):
     else:
         form = PodcastForm(instance=podcast)
 
-    return render(request,'podcast/editar_perfil_criador.html',{'form':form,'podcast':podcast})
+    return render(request,'podcast/editar_perfil_criador.html', {
+        'form':form,
+        'podcast':podcast,
+        'episodios':episodios})
 
 @login_required
 def excluir_conta(request):
