@@ -4,6 +4,8 @@ from django.contrib import messages
 from .models import Episodio, Podcast
 from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 
+
+
 @login_required
 def Index(request):
     return render(request, "podcast/index.html")
@@ -15,7 +17,8 @@ def podcastPage(request):
     return render(request, "podcast/podcast_page.html")
 @login_required
 def index_Criador(request):
-    return render(request, "podcast/index_criador.html")
+    podcast = Podcast.objects.filter(usuario=request.user).first()
+    return render(request, "podcast/index_criador.html",{'podcast':podcast})
 @login_required
 def Favoritos(request):
     return render(request, "podcast/favoritos.html")
@@ -56,7 +59,7 @@ def EstatisticasCriador(request):
 
 @login_required
 def EditarPerfilCriador(request):
-    podcast = get_object_or_404(Podcast, criador=request.user)
+    podcast = get_object_or_404(Podcast, usuario=request.user)
 
     if request.method == 'POST':
         form = EditarPodcastForm(request.POST, request.FILES, instance=podcast)
@@ -67,6 +70,8 @@ def EditarPerfilCriador(request):
         form = EditarPodcastForm(instance=podcast)
 
     return render(request, "podcast/editar_perfil_criador.html", {'form': form, 'podcast': podcast})
+
+
 @login_required
 def ExcluirEpisodio(request):
     return render(request, "podcast/editar_perfil_criador.html")

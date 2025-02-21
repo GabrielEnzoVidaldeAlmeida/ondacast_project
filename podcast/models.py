@@ -17,7 +17,7 @@ class Podcast(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
-    foto = models.ImageField(upload_to='podcast/media/fotos',default='user/static/user/img/user-default.jpg')
+    foto = models.ImageField(upload_to='media/fotos',default='media/fotos/img/user-default.jpg')
     data_criacao = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

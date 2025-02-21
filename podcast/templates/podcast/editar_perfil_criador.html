@@ -100,6 +100,8 @@
         
     <div class="podcast-content">
         <div class="form-area">
+            {{podcast.nome_podcast}}
+            {{podcast.foto}}
             <form class="form-group" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
