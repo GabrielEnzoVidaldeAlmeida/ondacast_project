@@ -15,7 +15,7 @@ class Episodio(models.Model):
         return self.titulo
 
 class Podcast(models.Model):
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    criador = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     foto = models.ImageField(upload_to='media/fotos', default='media/fotos/img/user-default.jpg')

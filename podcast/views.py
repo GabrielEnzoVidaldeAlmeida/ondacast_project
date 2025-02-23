@@ -25,7 +25,7 @@ def InicialDeslogado(request):
 @login_required
 def index_Criador(request):
     try:
-        podcast = Podcast.objects.get(usuario=request.user)
+        podcast = Podcast.objects.get(criador=request.user)
         episodios = Episodio.objects.filter(podcast=podcast)  
     except Podcast.DoesNotExist:
         podcast = None

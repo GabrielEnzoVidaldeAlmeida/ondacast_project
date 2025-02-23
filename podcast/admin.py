@@ -3,7 +3,7 @@ from .models import Podcast, Episodio
 
 @admin.register(Podcast)
 class PodcastAdmin(admin.ModelAdmin):
-    list_display = ("nome", "usuario", "data_criacao")
+    list_display = ("nome", "criador", "data_criacao")
     search_fields = ("nome", "usuario__username")
     list_filter = ("data_criacao",)
     ordering = ("-data_criacao",)
