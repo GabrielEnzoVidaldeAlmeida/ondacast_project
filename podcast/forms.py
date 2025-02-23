@@ -9,7 +9,7 @@ class PodcastForm(forms.ModelForm):
 class EpisodioForm(forms.ModelForm):
     class Meta:
         model = Episodio
-        fields = ['titulo', 'descricao', 'capa', 'arquivo_audio']
+        fields = ['titulo', 'descricao', 'capa', 'arquivo_audio', 'podcast']
         widgets = {
             'descricao': forms.TextInput(attrs={'maxlength': 140}),
         }

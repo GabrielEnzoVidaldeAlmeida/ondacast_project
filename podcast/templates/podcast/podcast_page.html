@@ -70,150 +70,89 @@
         </div>
     </div>
     <div class="card-principal">
-        <h2>Talentos Extraordinários</h2>
+       
+         <h2>{{podcast.nome}}</h2>
+       
         <div class="podcast-content">
-            <div class="sobre-podcast">
-                <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                <div class="sobre">
-                    <div class="sobre-seguindo">
-                        <h3>Sobre:</h3>
-                        <div></div>
-                        <div class="btn-podcastpage">
-                        <button id="btn-sininho"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                            <svg class="svg-sininho" width="2vw" height="4vh" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-j</title><path d="M427.68,351.43C402,320,383.87,304,383.87,217.35,383.87,138,343.35,109.73,310,96c-4.43-1.82-8.6-6-9.95-10.55C294.2,65.54,277.8,48,256,48S217.79,65.55,212,85.47c-1.35,4.6-5.52,8.71-9.95,10.53-33.39,13.75-73.87,41.92-73.87,121.35C128.13,304,110,320,84.32,351.43,73.68,364.45,83,384,101.61,384H410.49C429,384,438.26,364.39,427.68,351.43Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M320,384v16a64,64,0,0,1-128,0V384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></button>
-                        <button id="btn-seguir">Seguir</button>
-                    </div>
-                    </div>
-                    <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...</p>
+            <div class="sobre-podcast"> 
+
+            <img src="{% if podcast.foto %}{{ podcast.foto.url }}{% else %}{% static 'user/img/user-default.jpg' %}{% endif %}" alt="Foto do Podcast">
+           
+            <div class="sobre">
+                <div class="">
+                    <h3>Sobre:</h3>    
                 </div>
+                    <p>{{podcast.descricao}}</p>
+                </div>   
             </div>
             <div class="barra-branca-separadora"></div>
         </div>
-             <h2>Episódios:</h2>
-            <div class="eps-podcast">
+        <h2>Episódios:</h2>
+        <div class="eps-podcast">
+            {% for episodio in episodios %}
                 <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                   
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                    </div> 
+                    <img src="{{ episodio.capa.url }}" alt="Capa do episódio" style="width: 100px; height: auto;">
+                    <h3>{{ episodio.titulo }}</h3>
+                    <p>{{episodio.data_publicacao}}</p>
+                    <p>{{episodio.descricao}}</p>
                     <div class="button-container">
                         <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play"onclick="changePlayer('{{ episodio.capa.url }}', '{{ episodio.titulo }}', '{{ episodio.descricao }}', '{{ episodio.arquivo_audio.url }}')">
                         </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
-                        </button>
-                    </div> 
-                </div>
-
-                <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
                     </div>
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
-                        </button>
-                    </div> 
                 </div>
-
-                <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                    </div> 
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
-                        </button>
-                    </div> 
+            {% endfor %}
+        </div>
+              
+        </div>
+        <div class="play">
+            <div class="play2">
+                <div class="music-info">
+                    <!-- Aqui a imagem e título do episódio serão atualizados -->
+                    <img id="episodeCapa" src=""  style="width: 100px; height: auto;">
+                    <div class="text-container">
+                        <h3 id="episodeTitulo"></h3>
+                        <p id="episodeDescricao"></p>
+                    </div>
                 </div>
-                
-                <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                    </div> 
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+        
+                <div class="player-container">
+                    <div class="controls">
+                        <button onclick="rewindAudio()"> 
+                            <img src="{% static 'podcast/svg/chevron-left-svgrepo-com.svg' %}" alt="Voltar">
                         </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
+                        <button id="playBtn" onclick="togglePlay()"> 
+                            <img src="{% static 'podcast/svg/play-button-arrowhead-svgrepo-com(2).svg' %}" alt="Play">
                         </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
+                        <button id="pauseBtn" style="display:none;"> 
+                            <img src="{% static 'podcast/svg/music-player-pause-button-svgrepo-com.svg' %}" alt="Pause">
                         </button>
-                    </div> 
-                </div>
-                <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                    </div> 
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
+                        <button onclick="forwardAudio()"> 
+                            <img src="{% static 'podcast/svg/chevron-right-svgrepo-com.svg' %}" alt="Avançar">
                         </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
-                        </button>
-                    </div> 
-                </div>
-                <div class="card-ep">
-                    <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                    <div class="info-ep">
-                        <h3>O Poder de Servir</h3>
-                        <span>12/12/2012 - 2H</span>
-                        <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações."</p>
-                    </div> 
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/heart.png' %}" alt="Curtir">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/download.png' %}" alt="Baixar">
-                        </button>
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play">
-                        </button>
-                    </div> 
+                    </div>
+                    <div class="progress-container">
+                        <span id="currentTime">0:00</span>
+                        <input type="range" id="seekBar" value="0" step="1">
+                        <span id="duration">0:00</span>
+                    </div>
+                    <!-- O áudio será atualizado dinamicamente -->
+                    <audio id="audioPlayer">
+                        <source src="" type="audio/mpeg">
+                    </audio>
                 </div>
             </div>
+        </div>
+        
+        
+        
     </div>
 </div>
+
 {% endblock %}
 
 {% block javascript %}
+     <script src="{% static "/podcast/js/favoritos.js" %}"></script>
+    <script src="{% static "/podcast/js/play.js" %}"></script>
     <script src="{% static "/user/js/user.js" %}"></script>
 {% endblock %}

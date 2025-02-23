@@ -33,8 +33,9 @@ body{
     }
     .sobre-podcast img{ 
         border-radius: 0.63vw;
-        width: 13vw;
+        width: 15vw;
         height: 20vh;
+        margin-bottom: 17px;
     }
     .sobre{
         margin-left: 10px;
@@ -51,6 +52,11 @@ body{
             margin-top: -1vh;
             font-size: 3vh;
             width: 52vw;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal; /* Garante que o texto quebre corretamente */
+            max-width: 100%; /* Impede que ultrapasse os limites do contêiner */
+            overflow: hidden; /* Evita que transborde */
         }
     } 
 }

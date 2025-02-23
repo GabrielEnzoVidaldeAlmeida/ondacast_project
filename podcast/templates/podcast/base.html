@@ -111,50 +111,8 @@
                     </div>
                 </div>
             </footer>
-            <div class="play">
-            <div class="play2">
-                <div class="music-info">
-                    <!-- Capa do Podcast -->
-                    <img src="{{ podcast.capa.url }}" alt="Capa do Podcast">
+            
 
-                    <!-- Informações da Música -->
-                    <div class="music-details">
-                        <h4 id="tituloPodcast">{{ podcast.titulo }}</h4>
-                        <p id="autorPodcast">{{ podcast.autor }}</p>
-                    </div>
-                </div>
-            </div>    
-
-                <!-- Barra de Progresso -->
-                <div class="progress-container">
-                    <span id="tempoAtual" class="time">0:00</span>
-                    <div class="progress-bar" id="progressBar">
-                        <div class="progress" id="progress"></div>
-                    </div>
-                    <span id="tempoTotal" class="time">0:00</span>
-                </div>
-
-                <!-- Controles do Player -->
-                <div class="controls">
-                    <button id="btn-voltar">
-                        <img src="{% static 'podcast/svg/chevron-left-svgrepo-com.svg' %}"alt="Voltar">
-                    </button>
-                    <button id="btn-playPause">
-                        <img id="playPauseIcon"src="{% static 'podcast/svg/play-svgrepo-com.svg' %}"alt="Play">
-                    </button>
-                    <button id="btn-avancar">
-                        <img src="{% static 'podcast/svg/chevron-right-svgrepo-com.svg' %}"alt="Avançar">
-                    </button>
-                </div>
-
-                <!-- Áudio -->
-                <audio id="audioPlayer">
-                    <source src="{{ podcast.arquivo.url }}"type="audio/mpeg">
-                </audio>
-            </div>
-
-        </div>
-        <script src="{% static "/podcast/js/play.js" %}"></script>
         {% block javascript %}
 
         {% endblock %}

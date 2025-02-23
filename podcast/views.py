@@ -9,19 +9,20 @@ from django.http import JsonResponse
 from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 
 
+@login_required
+def index(request):
+    podcasts = Podcast.objects.all()
+    return render(request, 'podcast/index.html', {'podcasts': podcasts})
 
 @login_required
-def Index(request):
-    return render(request, "podcast/index.html")
+def podcast_page(request, podcast_id):
+    podcast = get_object_or_404(Podcast, id=podcast_id)
+    episodios = Episodio.objects.filter(podcast=podcast)
+    return render(request, 'podcast/podcast_page.html', {'podcast': podcast, 'episodios': episodios})
 
 def InicialDeslogado(request):
     return render(request, "podcast/inicial_deslogado.html")
 @login_required
-def podcastPage(request):
-    return render(request, "podcast/podcast_page.html")
-@login_required
-
-
 def index_Criador(request):
     try:
         podcast = Podcast.objects.get(usuario=request.user)
