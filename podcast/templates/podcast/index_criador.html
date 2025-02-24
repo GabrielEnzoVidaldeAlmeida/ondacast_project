@@ -108,16 +108,22 @@
 
         <div class="eps-podcast">
             <h3>Episódios:</h3>
-                <ul>
+            <div class="card-ep">
+                <ul class="episode-list">
                     {% for episodio in episodios %}
-                        <li>
-                            <img src="{{ episodio.capa.url }}" alt="Capa do episódio" style="width: 100px; height: auto;">
-                            <strong>{{ episodio.titulo }}</strong> - {{ episodio.descricao }}
+                        <li class="episode-item">
+                            <img src="{{ episodio.capa.url }}" alt="Capa do episódio">
+                            <div class="episode-info">
+                                <h2>{{ episodio.titulo }}</h2>
+                                <h4>"{{ episodio.descricao }}"</h4>
+                                <span>{{episodio.data_publicacao}}</span>
+                            </div>
                         </li>
                     {% empty %}
-                        <li>Você ainda não adicionou episódios.</li>
+                        <li class="empty-message">Você ainda não adicionou episódios.</li>
                     {% endfor %}
                 </ul>
+            </div>
 
-</div>
+        </div>
 {% endblock%}

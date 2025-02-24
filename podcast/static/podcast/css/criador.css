@@ -163,6 +163,82 @@ body{
     margin-bottom: 2vh;
 }
 
+.card-ep {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    width: 574px;
+}
+
+.episode-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episode-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+
+.episode-item:last-child {
+    border-bottom: none;
+}
+
+.episode-item img {
+    border-radius: 0.63vw;
+    width: 13vw;
+    height: 20vh;
+}
+
+.episode-info {
+    flex-grow: 1;
+}
+
+.episode-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.episode-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.episode-info h4 {
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.delete-button {
+    font-size: 18px;
+    color: #ff5c5c;
+}
+
+.empty-message {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
 /*  estatisticas    */
 
 .btn-data{

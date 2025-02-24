@@ -102,7 +102,7 @@ def cadastro_criador(request):
 @login_required
 def editar_podcast(request):
     try:
-        podcast = Podcast.objects.get(usuario=request.user)
+        podcast = Podcast.objects.get(criador=request.user)
         episodios = Episodio.objects.filter(podcast=podcast)
     except Podcast.DoesNotExist:
         podcast = None
@@ -112,7 +112,7 @@ def editar_podcast(request):
         form = PodcastForm(request.POST,request.FILES, instance=podcast)
         if form.is_valid():
             podcast=form.save(commit=False)
-            podcast.usuario = request.user
+            podcast.criador = request.user
             podcast.save()
             return redirect('editar_perfil_criador')
     else:

@@ -51,7 +51,7 @@ def AdicionarEpisodio(request):
         capa = request.FILES.get("capa")
         arquivo_audio = request.FILES.get("arquivo_audio")
 
-        podcast = Podcast.objects.filter(usuario=request.user).first()
+        podcast = Podcast.objects.filter(criador=request.user).first()
 
         if not titulo or not descricao or not capa or not arquivo_audio:
             messages.error(request, "Por favor, preencha todos os campos!")

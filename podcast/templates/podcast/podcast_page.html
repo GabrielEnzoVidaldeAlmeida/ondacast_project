@@ -90,17 +90,20 @@
         <h2>Episódios:</h2>
         <div class="eps-podcast">
             {% for episodio in episodios %}
-                <div class="card-ep">
-                    <img src="{{ episodio.capa.url }}" alt="Capa do episódio" style="width: 100px; height: auto;">
+            <div class="card-ep">
+                <img src="{{ episodio.capa.url }}" alt="Capa do episódio">
+                <div class="info-ep">
                     <h3>{{ episodio.titulo }}</h3>
-                    <p>{{episodio.data_publicacao}}</p>
-                    <p>{{episodio.descricao}}</p>
-                    <div class="button-container">
-                        <button class="icon-button">
-                            <img src="{% static '/user/img/botao-play.png' %}" alt="Play"onclick="changePlayer('{{ episodio.capa.url }}', '{{ episodio.titulo }}', '{{ episodio.descricao }}', '{{ episodio.arquivo_audio.url }}')">
-                        </button>
-                    </div>
+                    <span>{{episodio.data_publicacao}}</span>
+                    <p>"{{ episodio.descricao }}"</p>
                 </div>
+                <div class="button-container">
+                    <button class="icon-button">
+                        <img src="{% static '/user/img/botao-play.png' %}" alt="Play"
+                            onclick="changePlayer('{{ episodio.capa.url }}', '{{ episodio.titulo }}', '{{ episodio.descricao }}', '{{ episodio.arquivo_audio.url }}')">
+                    </button>
+                </div>
+            </div>
             {% endfor %}
         </div>
               

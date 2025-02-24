@@ -36,6 +36,9 @@ body {
     text-transform: capitalize;
     margin-bottom: 20px;
 }
+.logo h1{
+    color: #FFFFFF;
+}
 
 
 /* Estilização do Formulário */

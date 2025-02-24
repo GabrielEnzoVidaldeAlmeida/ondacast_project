@@ -131,6 +131,9 @@ body{
             width: 13vw;
             height: 20vh;
      }
+     p{
+        font-family: 'Courier New', Courier, monospace;
+     }
     
 }
 .button-container {
