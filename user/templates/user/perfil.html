@@ -130,20 +130,17 @@
         <div class="profile-info">
             <div class="informacoes">
                 <h4>Nome:</h4>
-                <input type="text" value="Aluísio Igor Rego Fontes">
-                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
+                <p>{{user.username}}</p>                
             </div>
             <div class="informacoes">
                 <h4>Senha:</h4>
                 <input id="senhaPerfil" type="password" value="euamocorrer">
                 <button id="btn-eye"><img src="{% static "user/svg/eye-svgrepo-com.svg" %}" alt=""></button>
-                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
 
             </div>
             <div class="informacoes">
                 <h4>E-mail:</h4>
-                <input type="email" value="euamocorrer@gmail.com">
-                <button id="btn-editPerfil"><img src="{% static "user/svg/edit-svgrepo-com.svg" %}" alt="" title="editável"></button>
+                <p>{{user.email}}</p>
             </div>
             <div class="btn-salvar-dados">
                 <button id="btnAlteracoes">Salvar Alterações</button>
@@ -151,7 +148,7 @@
         </div>
         <div class="configs configs-btns">
             <div class="btn-criar-conta-criador">
-                <a href="{% url 'login_criador' %}"><button>Criar conta de CRIADOR</button></a>
+                <a href="{% url 'login_criador' %}"><button>Criar conta de criador</button></a>
             </div>
             <div class="btn-excluir-conta">
                 <button>Excluir Conta</button>

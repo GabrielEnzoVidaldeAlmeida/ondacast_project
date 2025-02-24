@@ -113,8 +113,20 @@
 }
 .informacoes{
 
-
     input{
+        background-color: var(--btn-lateral-clicado);
+        border: none;
+        border-radius: 1vh;
+        width: 65vw;
+        height: 7vh;
+        font-family: "Josefin Sans", sans-serif;
+        color: var(--cor-fonte);
+        padding-left: 3vh;
+        padding-top: 1vh;
+        font-size: 2vh;
+    }
+
+    p{
         background-color: var(--btn-lateral-clicado);
         border: none;
         border-radius: 1vh;
