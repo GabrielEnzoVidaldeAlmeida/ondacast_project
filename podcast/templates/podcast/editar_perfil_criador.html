@@ -90,17 +90,29 @@
     </div>
 
     <div class="card-principal">
-        <h2>Talentos Extraordinários  <a href="#" style="color:rgb(143, 143, 143); text-decoration: none;">&#9998;</a> </h2>
+        <h2>
+            {% if podcast %}
+                Editar Podcast
+            {% else %}
+                Criar Podcast
+            {% endif %}
+        </h2>
+        
     <div class="podcast-content">
-        <div class="sobre-podcast">
-            <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-            <div class="sobre">
-                <div class="">
-                    <h3>Sobre:</h3>
-                    
-                </div>
-                <p>"Talentos Extraordinários" é um podcast que compartilha as histórias inspiradoras de programadores que alcançaram sucesso e reconhecimento na indústria da tecnologia. A cada episódio, o programa mergulha nas trajetórias de indivíduos que, por meio de suas habilidades técnicas e inovação, conseguiram transformar suas paixões em carreiras de destaque...  <a href="#" style="color:rgb(143, 143, 143); text-decoration: none;">&#9998;</a>  </p>
-            </div>
+        <div class="form-area">
+            {{podcast.nome_podcast}}
+            {{podcast.foto}}
+            <form class="form-group" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn-submit" type="submit" >
+                    {% if podcast %}
+                        Salvar Alterações
+                    {% else %}
+                        Criar Podcast
+                    {% endif %}
+                </button>
+            </form>
         </div>
 
         <div class="barra-branca-separadora"></div>
@@ -108,21 +120,33 @@
         <div class="eps-podcast">
             <h3>Episódios:</h3>
             <div class="card-ep">
-                
-                <img src="{% static "/user/img/talentos_extraordinarios_principal.png" %}" alt="">
-                <div class="info-ep">
-                    <h4>O Poder de Servir  </h4>
-                    <div class="info-ep-header">
-                        
-                        <span>12/12/2012 - 2H </span>
-                        <button href="#" class="btn-deletar"> &#128465; </button>  
-                    </div>
-                    <p>"O Poder de Servir" é um conceito que explora a transformação pessoal e social que ocorre quando colocamos o serviço ao próximo no centro de nossas ações." </p>
-                </div>  
+                <ul class="episode-list">
+                    {% for episodio in episodios %}
+                        <li class="episode-item">
+                            <img src="{{ episodio.capa.url }}" alt="Capa do episódio">
+                            <div class="episode-info">
+                                <h2>{{ episodio.titulo }}</h2>
+                                <h4>"{{ episodio.descricao }}"</h4>
+                            </div>
+                            <div class="button-container">
+                                <button class="icon-button delete-button" onclick="deletarEpisodio({{ episodio.episodio_id }})">
+                                    🗑️
+                                </button>
+                            </div>
+                        </li>
+                    {% empty %}
+                        <li class="empty-message">Você ainda não adicionou episódios.</li>
+                    {% endfor %}
+                </ul>
             </div>
+            
 </div>
 
     </div>
         
     </div>
+
+{% load static %}
+<script src="{% static 'podcast/js/editar_perfil_criador.js' %}"></script>
+
 {% endblock %}

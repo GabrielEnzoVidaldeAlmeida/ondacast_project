@@ -86,4 +86,26 @@ btnCloseAltFoto.addEventListener('click', function(){
     }
 });
 //-------------------------------------------------------------
+var btnExcluirConta = document.querySelector('.btn-excluir-conta');
+var cardExcluirConta = document.querySelector('.card-excluir-conta');
+var ofuscarBody = document.querySelector('.ofuscado');
+var btnManterConta = document.querySelector('#manter-conta');
 
+btnExcluirConta.addEventListener('click', function() {
+    var displayCardExcluirConta = window.getComputedStyle(cardExcluirConta).display;
+    var displayOfuscarBody = window.getComputedStyle(ofuscarBody).display;
+
+    if (displayCardExcluirConta === 'none') {
+        cardExcluirConta.style.display = 'block';
+        ofuscarBody.style.display = 'block';
+    }
+});
+
+btnManterConta.addEventListener('click', function(){
+    var displayCardExcluirConta = window.getComputedStyle(cardExcluirConta).display;
+
+    if (displayCardExcluirConta === 'block') {
+        cardExcluirConta.style.display = 'none';
+        ofuscarBody.style.display = 'none';
+    }
+});

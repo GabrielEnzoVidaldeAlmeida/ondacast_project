@@ -187,7 +187,8 @@
 
 .configs{
     display: flex;
-    margin-left: 64px;
+    margin-left: 19px;
+    margin-bottom: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -316,6 +317,7 @@ h3{
     }
 }
 
+
 /*-------------------------------*/
 
 /*CARD EXCLUIR CONTA*/
@@ -372,7 +374,7 @@ h3{
     color: var(--cor-fonte);
     width: 140px;
     height: 40px;
-    margin-left: 10px;
+    margin-left: -19px;
     margin-top: 30px;
 
 }

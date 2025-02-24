@@ -75,76 +75,16 @@
         <div class="carrosselRecentes">
             <div class="horizontal-scroll">
                 <div class="recentes-container">
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
-                    <div class="card-recentes">
-                        <a href="{% url 'podcast_page' %}">
-                            <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                            <h3>Talentos Extraordinários</h3>
-                            <p>Aluísio Igor</p>
-                        </a>
-                    </div>
+                    {% for podcast in podcasts %}
+                        <div class="card-recentes">
+                            <a href="{% url 'podcast_page' podcast.id %}">
+                                <img src="{{ podcast.foto.url }}" alt="Capa de {{ podcast.nome }}" style="    width: 13vw; height: 20vh;">
+                                <h3>{{ podcast.nome }}</h3>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    
                 </div>
             </div>
         </div>
@@ -159,32 +99,32 @@
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                 </div>
             </div>
@@ -198,32 +138,32 @@
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                     <div class="card-recentes">
                         <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        <p>Aluísio Igor</p>
+                        
                     </div>
                 </div>
             </div>

@@ -90,34 +90,42 @@
 
 <div class="card-principal">
     <h2>Adicionar novo episódio</h2>
-    <form class="upload-form">
+    <form id="episode-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    
         <div class="form-group">
             <label>Foto do episódio</label>
             <div class="upload-area">
-                <input id="img-upload" type="file" id="episode-photo" hidden>
-                <button type="button" class="btn-select">Selecionar Imagem</button>
+                <input type="file" id="episode-photo" name="capa" accept="image/*" class= "btn-select" required>
+               
             </div>
         </div>
-
+    
         <div class="form-group">
             <label>Título do episódio</label>
-            <input type="text" placeholder="O Poder da Semadura">
+            <input type="text" name="titulo" id="episode-title" placeholder="O Poder da Semadura" required>
         </div>
-
+    
         <div class="form-group">
             <label>Descrição</label>
-            <input type="text" placeholder="máx. 140 caracteres">
+            <input type="text" name="descricao" id="episode-description" placeholder="máx. 140 caracteres" required>
         </div>
-
+    
         <div class="form-group">
-            <label>Upload</label>
+            <label>Upload do áudio</label>
             <div class="upload-area">
-                <input type="file" id="episode-audio" hidden>
-                <button type="button" class="btn-select">Selecionar Arquivo</button>
+                <input type="file" id="episode-audio" name="arquivo_audio" accept="audio/*" class= "btn-select" required>
+                
             </div>
         </div>
-
+        
+        <input type="hidden" name="form_submitted" value="true">
         <button type="submit" class="btn-submit">Salvar e enviar</button>
+        
     </form>
+    
+    <!-- Importando o JavaScript -->
+    <script src="{% static 'js/adicionar_episodio.js' %}"></script>
+    
 </div>
 {% endblock %}

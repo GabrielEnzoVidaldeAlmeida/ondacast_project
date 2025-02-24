@@ -9,100 +9,94 @@
     --card-login: #1B002F; 
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: var(--fundo-principal);
-}
-.card-login{
-    background-color: var(--card-login);
-    margin-top: 70px;
-    height: 600px;
-    width: 500px;
-    justify-self: center;
-    border-radius: 10px;
-
-}
-
-h1{
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
-    color: var(--cor-fonte);
-    font-weight: 300;
-}
-h2{
+/* Estilização Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #380061; /* Cor de fundo da página */
     display: flex;
     justify-content: center;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
-    color: var(--cor-fonte);
-    font-weight: 300;
-}
-
-.logo{
-    display: flex;
     align-items: center;
-    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Card de Login */
+.card-login {
+    background-color:#1B002F; /* Cor do card */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+.card-login h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
 }
 .logo h1{
-    margin-right: 20px;
-    margin-top: 80px;
-}
-.logo img{
-    margin-top: 50px;
+    color: #FFFFFF;
 }
 
-.form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Estilização do Formulário */
+.form label {
+    display: block;
+    text-align: left;
+    color: #CCCCCC;
+    margin: 10px 0 5px;
+    font-size: 14px;
 }
-.form input{
-    display: flex;
-    flex-direction: column;
-    font-family: "Josefin Sans", sans-serif;
+
+.form input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+    background: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form input:focus {
+    border-bottom-color: #E74C3C; /* Cor do destaque ao focar */
+}
+
+/* Botão de Login */
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form button:hover {
+    background-color: #868686;
+}
+
+/* Links abaixo do botão */
+.login-buttons {
+    margin-top: 15px;
+}
+
+.login-buttons a {
+    display: block;
     text-decoration: none;
+    color: #CCCCCC;
+    font-size: 14px;
     margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding: 5px 10px 2px 10px;
-    background-color: var(--card-login);
-    border-bottom: solid 2px var(--cor-fonte);
-    border-top: none;
-    border-right: none;
-    border-left: none;
-
-    color: var(--cor-fonte);
-}
-.login-buttons #btn-entrar{
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #000000;
-    background-color: #FFFFFF;
-    width: 70px;
-    border-radius: 15px;
-    padding: 10px 10px 8px 10px;
-    justify-self: center;
-    text-decoration: none;
 }
 
-.login-buttons a{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-.login-buttons p{
-    display: flex;
-    justify-content: center;
-    color: var(--cor-fonte);
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-    margin-top: 100px;
+.login-buttons a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
-a{
-    font-family: "Josefin Sans", sans-serif;
-    color: var(--cor-fonte);
-}
+
