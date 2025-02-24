@@ -61,7 +61,8 @@ body {
 }
 
 .form input:focus {
-    border-bottom-color: #E74C3C; /* Cor do destaque ao focar */
+    border-bottom-color: #7800cd; /* Cor do destaque ao focar */
+    transition: 150ms;
 }
 
 /* Botão de Login */
@@ -86,17 +87,22 @@ body {
     margin-top: 15px;
 }
 
+.login-buttons p{
+    color: #CCCCCC;
+}
+
 .login-buttons a {
     display: block;
     text-decoration: none;
-    color: #CCCCCC;
+    color: white;
     font-size: 14px;
     margin-top: 10px;
+    text-decoration: underline;
+
 }
 
 .login-buttons a:hover {
-    color: white;
-    text-decoration: underline;
+    color: #7800cd;
 }
 
 
