@@ -3,7 +3,7 @@
 
 {% block navegar-home %}
 <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
-<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+<a href="{% url 'index' %}"></a><img src="{% static "user/img/headphones.png" %}" alt=""></a>
 {% endblock %}
 
 {% block main %}
@@ -16,7 +16,7 @@
         <div class="containerRecentes">
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/talentos_extraordinarios.png" %}" alt="">
+                    <img src="{% static "podcast/img/talentos_extraordinarios.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Talentos Extraordinários</h4>
                         <p>Aluísio Rego</p>
@@ -25,16 +25,16 @@
             </div>
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/mentes_inspiradoras.png" %}" alt="">
+                    <img src="{% static "podcast/img/mentes_inspiradoras.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Mentes Inspiradoras</h4>
                         <p>Com Aluísio Rego</p>
                     </div>
                 </a>
             </div>
-                        <div class="recentes">
+            <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/neabi.png" %}" alt="">
+                    <img src="{% static "podcast/img/neabi.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>NEABI</h4>
                         <p>Personalidades negras</p>
@@ -45,7 +45,7 @@
         <div class="containerSeguindo" style="visibility: hidden;">
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/aluisio_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/aluisio_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Aluísio Igor</h4>
                     </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/momento_ifrn_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Momento IFRN</h4>
                     </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/neabi_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/neabi_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>NEABI</h4>
                     </div>
@@ -78,53 +78,31 @@
                     {% for podcast in podcasts %}
                         <div class="card-recentes">
                             <a href="{% url 'podcast_page' podcast.id %}">
-                                <img src="{{ podcast.foto.url }}" alt="Capa de {{ podcast.nome }}" style="    width: 13vw; height: 20vh;">
-                                <h3>{{ podcast.nome }}</h3>
+                                <img src="{{ podcast.foto.url }}" alt="Capa de {{ podcast.nome }}" style="width: 13vw; height: 20vh;">
+                                <!-- <h3>{{ podcast.nome }}</h3> -->
+                                <!-- Ao usar o annotate() nas views -->
+                                <h3>{{ podcast.nome }} ({{ podcast.num_episodios }} episódios)</h3>
                             </a>
+                            <ul style="color: white;">
+                                {% for episodio in podcast.episodios.all %}
+                                    <li style="color: white;">{{ episodio.titulo }}</li>
+                                {% empty %}
+                                    <li style="color: white;"><em>Sem episódios ainda.</em></li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     {% endfor %}
-
-                    
                 </div>
             </div>
         </div>
 
-
         <h2>Recomendado</h2>
         <div class="carrosselRecentes">
             <div class="horizontal-scroll">
-                
-
                 <div class="recentes-container">
                     <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <img src="{% static "podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
                     </div>
                 </div>
             </div>
@@ -133,45 +111,18 @@
         <h2>Descubra</h2>
         <div class="carrosselRecentes">
             <div class="horizontal-scroll">
-                
                 <div class="recentes-container">
                     <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
+                        <img src="{% static "podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
                         <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
-                    </div>
-                    <div class="card-recentes">
-                        <img src="{% static "/podcast/img/talentos_extraordinarios_principal.png" %}" alt="">
-                        <h3>Talentos Extraordinários</h3>
-                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 </div>
 {% endblock %}
-     
+
 {% block javascript %}
-<script src="{% static "/podcast/js/podcast.js" %}"></script>
+<script src="{% static "podcast/js/podcast.js" %}"></script>
 {% endblock %}

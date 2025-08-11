@@ -3,22 +3,52 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Episodio, Podcast
 from django.http import JsonResponse
+#Import para utilizar Count junto da função annotate():
+from django.db.models import Count
 
 
 
 from .forms import EpisodioForm, EditarPodcastForm, ExcluirEpisodioForm
 
+# Função annotate() - para realizar agregações:
+# def index(request):
+#     podcasts = Podcast.objects.annotate(num_episodios=Count('episodios'))
+#     return render(request, 'podcast/index.html', {'podcasts': podcasts})
 
+# Sem otimização:
+# @login_required
+# def index(request):
+#     podcasts = Podcast.objects.all()
+#     return render(request, 'podcast/index.html', {'podcasts': podcasts})
+
+# Versão otimizada - prefetch_related():
+# @login_required
+# def index(request):
+#     podcasts = Podcast.objects.all().prefetch_related('episodios')
+#     return render(request, 'podcast/index.html', {'podcasts': podcasts})
+
+#Usando annotate() e prefetch_related() juntas:
 @login_required
 def index(request):
-    podcasts = Podcast.objects.all()
+    podcasts = Podcast.objects.annotate(
+        num_episodios=Count('episodios')
+    ).prefetch_related('episodios')
     return render(request, 'podcast/index.html', {'podcasts': podcasts})
 
+# Versão não otimizada:
+# @login_required
+# def podcast_page(request, podcast_id):
+#     podcast = get_object_or_404(Podcast, id=podcast_id)
+#     episodios = Episodio.objects.filter(podcast=podcast)
+#     return render(request, 'podcast/podcast_page.html', {'podcast': podcast, 'episodios': episodios})
+
+#Versão Otimizada - select_related:
 @login_required
 def podcast_page(request, podcast_id):
     podcast = get_object_or_404(Podcast, id=podcast_id)
-    episodios = Episodio.objects.filter(podcast=podcast)
+    episodios = Episodio.objects.filter(podcast=podcast).select_related('podcast')
     return render(request, 'podcast/podcast_page.html', {'podcast': podcast, 'episodios': episodios})
+
 
 def InicialDeslogado(request):
     return render(request, "podcast/inicial_deslogado.html")

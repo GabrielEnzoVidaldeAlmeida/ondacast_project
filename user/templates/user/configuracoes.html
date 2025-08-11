@@ -3,14 +3,14 @@
 
 {% block navegar-home %}
 <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
-<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+<a href="{% url 'index' %}"></a><img src="{% static "user/img/headphones.png" %}" alt=""></a>
 {% endblock %}
 
 {% block nav %}
 <div class="navbar">
     <div class="logo">
         <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
-        <a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+        <a href="{% url 'index' %}"></a><img src="{% static "user/img/headphones.png" %}" alt=""></a>
     </div>
     <div class="nav-icons">
         <a href=""><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -56,7 +56,7 @@
         <div class="containerRecentes">
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/talentos_extraordinarios.png" %}" alt="">
+                    <img src="{% static "podcast/img/talentos_extraordinarios.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Talentos Extraordinários</h4>
                         <p>Aluísio Rego</p>
@@ -65,7 +65,7 @@
             </div>
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/mentes_inspiradoras.png" %}" alt="">
+                    <img src="{% static "podcast/img/mentes_inspiradoras.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Mentes Inspiradoras</h4>
                         <p>Com Aluísio Rego</p>
@@ -74,7 +74,7 @@
             </div>
                         <div class="recentes">
                 <a href="">
-                    <img src="{% static "/podcast/img/neabi.png" %}" alt="">
+                    <img src="{% static "podcast/img/neabi.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>NEABI</h4>
                         <p>Personalidades negras</p>
@@ -85,7 +85,7 @@
         <div class="containerSeguindo" style="visibility: hidden;">
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/aluisio_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/aluisio_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Aluísio Igor</h4>
                     </div>
@@ -93,7 +93,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/momento_ifrn_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Momento IFRN</h4>
                     </div>
@@ -101,7 +101,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/podcast/img/neabi_seguindo.png" %}" alt="">
+                    <img src="{% static "podcast/img/neabi_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>NEABI</h4>
                     </div>
@@ -167,5 +167,5 @@
 {% endblock %}
 
 {% block javascript %}
-    <script src="{% static "/user/js/config.js" %}"></script>
+    <script src="{% static "user/js/config.js" %}"></script>
 {% endblock %}

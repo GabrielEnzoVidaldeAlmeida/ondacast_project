@@ -3,7 +3,7 @@
 
 {% block navegar-home %}
 <a href="{% url 'index' %}"><h1>OndaCast</h1></a>
-<a href="{% url 'index' %}"></a><img src="{% static "/user/img/headphones.png" %}" alt=""></a>
+<a href="{% url 'index' %}"></a><img src="{% static "user/img/headphones.png" %}" alt=""></a>
 {% endblock %}
 
 {% block main %}
@@ -16,7 +16,7 @@
         <div class="containerRecentes">
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/user/img/talentos_extraordinarios.png" %}" alt="">
+                    <img src="{% static "user/img/talentos_extraordinarios.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Talentos Extraordinários</h4>
                         <p>Aluísio Rego</p>
@@ -25,7 +25,7 @@
             </div>
             <div class="recentes">
                 <a href="">
-                    <img src="{% static "/user/img/mentes_inspiradoras.png" %}" alt="">
+                    <img src="{% static "user/img/mentes_inspiradoras.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>Mentes Inspiradoras</h4>
                         <p>Com Aluísio Rego</p>
@@ -34,7 +34,7 @@
             </div>
                         <div class="recentes">
                 <a href="">
-                    <img src="{% static "/user/img/neabi.png" %}" alt="">
+                    <img src="{% static "user/img/neabi.png" %}" alt="">
                     <div class="info-card-recentes">
                         <h4>NEABI</h4>
                         <p>Personalidades negras</p>
@@ -45,7 +45,7 @@
         <div class="containerSeguindo" style="visibility: hidden;">
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/user/img/aluisio_seguindo.png" %}" alt="">
+                    <img src="{% static "user/img/aluisio_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Aluísio Igor</h4>
                     </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/user/img/momento_ifrn_seguindo.png" %}" alt="">
+                    <img src="{% static "user/img/momento_ifrn_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>Momento IFRN</h4>
                     </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="seguindo">
                 <a href="">
-                    <img src="{% static "/user/img/neabi_seguindo.png" %}" alt="">
+                    <img src="{% static "user/img/neabi_seguindo.png" %}" alt="">
                     <div class="info-card-seguindo">
                         <h4>NEABI</h4>
                     </div>
@@ -89,22 +89,24 @@
         </div>
         <h2>Episódios:</h2>
         <div class="eps-podcast">
-            {% for episodio in episodios %}
-            <div class="card-ep">
-                <img src="{{ episodio.capa.url }}" alt="Capa do episódio">
-                <div class="info-ep">
-                    <h3>{{ episodio.titulo }}</h3>
-                    <span>{{episodio.data_publicacao}}</span>
-                    <p>"{{ episodio.descricao }}"</p>
-                </div>
-                <div class="button-container">
-                    <button class="icon-button">
-                        <img src="{% static '/user/img/botao-play.png' %}" alt="Play"
-                            onclick="changePlayer('{{ episodio.capa.url }}', '{{ episodio.titulo }}', '{{ episodio.descricao }}', '{{ episodio.arquivo_audio.url }}')">
-                    </button>
-                </div>
-            </div>
-            {% endfor %}
+{% for episodio in episodios %}
+<div class="card-ep">
+    <img src="{{ episodio.capa.url }}" alt="Capa do episódio">
+    <div class="info-ep">
+        <h3>{{ episodio.titulo }}</h3>
+        <p><strong>Podcast:</strong> {{ episodio.podcast.nome }}</p>
+        <span>{{ episodio.data_publicacao }}</span>
+        <p>"{{ episodio.descricao }}"</p>
+    </div>
+    <div class="button-container">
+        <button class="icon-button">
+            <img src="{% static 'user/img/botao-play.png' %}" alt="Play"
+                onclick="changePlayer('{{ episodio.capa.url }}', '{{ episodio.titulo }}', '{{ episodio.descricao }}', '{{ episodio.arquivo_audio.url }}')">
+        </button>
+    </div>
+</div>
+{% endfor %}
+
         </div>
               
         </div>
@@ -155,7 +157,7 @@
 {% endblock %}
 
 {% block javascript %}
-     <script src="{% static "/podcast/js/favoritos.js" %}"></script>
-    <script src="{% static "/podcast/js/play.js" %}"></script>
-    <script src="{% static "/user/js/user.js" %}"></script>
+     <script src="{% static "podcast/js/favoritos.js" %}"></script>
+    <script src="{% static "podcast/js/play.js" %}"></script>
+    <script src="{% static "user/js/user.js" %}"></script>
 {% endblock %}
